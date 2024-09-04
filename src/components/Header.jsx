@@ -17,7 +17,7 @@ function Header() {
     };
 
     return (
-        <div className='flex justify-between items-center px-4 py-2 md:px-8 md:py-4 bg-white shadow-md sticky top-0 z-50'>
+        <div className='flex justify-between items-center px-7 py-2 md:px-40 md:py-4 bg-white shadow-md sticky top-0 z-50 '>
             <div>
                 <h2 className='text-2xl md:text-3xl font-bold text-gray-800'>M. Emamudin</h2>
             </div>
