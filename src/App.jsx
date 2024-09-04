@@ -2,6 +2,8 @@
 import Header from "./components/Header"
 import About from "./pages/About/About"
 import Home from "./pages/Home/Home"
+import Qualification from "./pages/Qualification/Qualification"
+import Skills from "./pages/Skills/Skills"
 
 function App() {
 
@@ -10,6 +12,8 @@ function App() {
       <Header/>
       <Home/>
       <About/>
+      <Skills/>
+      <Qualification/>
     </>
   )
 }
