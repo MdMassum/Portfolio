@@ -32,8 +32,8 @@ function Home() {
         </div>
         </div>
 
-        <div className='hidden md:block mx-80 mt-10'>
-            <a href="#about"><button className='flex justify-center items-center rounded-xl gap-1 px-4 py-2 hover:text-red-500'>
+        <div className='hidden md:block mx-80 mt-7 mb-20'>
+            <a href="#about"><button className='flex justify-center items-center rounded-xl gap-1 px-4 py-2 hover:text-red-500 transition-all duration-300 ease-in-out'>
                 <LuMouse />
                 <p>Scroll</p>
                 <FaArrowDown />
