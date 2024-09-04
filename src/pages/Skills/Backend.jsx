@@ -3,7 +3,7 @@ import { IoMdCheckmarkCircleOutline } from "react-icons/io";
 
 function Backend() {
   return (
-    <div className='flex flex-col items-center p-6 bg-white shadow-lg rounded-lg max-w-md mx-auto transform transition-transform duration-300 hover:scale-105'>
+    <div className='flex flex-col items-center p-6 bg-white shadow-lg rounded-lg max-w-md mx-auto transform transition-transform duration-300 hover:scale-105 cursor-pointer'>
       <h3 className='text-2xl font-semibold mb-6 text-center'>Backend</h3>
       <div className='flex flex-col'>
         
