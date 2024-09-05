@@ -3,7 +3,7 @@ import HomeConnect from '../../assets/HomeConnect.png'
 import NewsBhandar from '../../assets/newsbhandar.png'
 import portfolio from '../../assets/portfolio.png'
 import photo1 from '../../assets/work1.jpg'
-import Card from './card';
+import Card from './Card.jsx';
 
 function MainProj() {
     const projects = [
