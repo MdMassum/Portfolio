@@ -11,7 +11,7 @@ function Qualification() {
       <h2 className='text-3xl md:text-5xl font-bold text-center md:text-left'>Qualification</h2>
       <span className='text-gray-500 text-sm md:text-lg text-center md:text-left'>My Personal Journey</span>
 
-      <div className='flex justify-center gap-6 mb-10'>
+      <div className='flex justify-center gap-6 mb-1 mt-10'>
         <button
           className={`flex items-center gap-2 ${activeTab === 'Education' ? 'text-black font-semibold' : 'text-gray-500'}`}
           onClick={() => setActiveTab('Education')}
