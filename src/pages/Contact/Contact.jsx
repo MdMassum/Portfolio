@@ -60,7 +60,7 @@ function Contact() {
                 rel="noopener noreferrer"
                 className='flex justify-center items-center gap-1 mt-3 text-green-500 hover:text-green-700'
             >
-                Write me<FaArrowRight />
+                Message me<FaArrowRight />
             </a>
 
           </div>
