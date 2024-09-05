@@ -1,5 +1,5 @@
 import React from 'react'
-import HomeConnect from '../../assets/HomeConnect.png'
+import HomeConnect from '../../assets/Homeconnect.png'
 import NewsBhandar from '../../assets/newsbhandar.png'
 import portfolio from '../../assets/portfolio.png'
 import photo1 from '../../assets/work1.jpg'
