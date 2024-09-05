@@ -1,5 +1,7 @@
 // import './App.css'
+import Footer from "./components/Footer"
 import Header from "./components/Header"
+import ScrollUp from "./components/ScrollUp"
 import About from "./pages/About/About"
 import Contact from "./pages/Contact/Contact"
 import Home from "./pages/Home/Home"
@@ -16,6 +18,8 @@ function App() {
       <Skills/>
       <Qualification/>
       <Contact/>
+      <Footer/>
+      <ScrollUp/>
     </>
   )
 }

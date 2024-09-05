@@ -40,7 +40,7 @@ function Contact() {
           <h3 className='text-xl font-semibold text-center'>Talk To Me</h3>
 
           {/* Email */}
-          <div className='flex flex-col justify-center items-center shadow-lg rounded-lg p-6 bg-white transform transition-transform duration-300 hover:scale-105'>
+          <div className='flex flex-col justify-center items-center shadow-md rounded-lg p-6 bg-white transform transition-transform duration-300 hover:scale-105'>
             <MdAttachEmail className='text-4xl text-red-500' />
             <span className='font-semibold text-lg'>Email</span>
             <span className='text-gray-500'>mdemamudin726@gmail.com</span>
@@ -50,7 +50,7 @@ function Contact() {
           </div>
 
           {/* Whatsapp */}
-          <div className='flex flex-col justify-center items-center shadow-lg rounded-lg p-6 bg-white transform transition-transform duration-300 hover:scale-105'>
+          <div className='flex flex-col justify-center items-center shadow-md rounded-lg p-6 bg-white transform transition-transform duration-300 hover:scale-105'>
             <FaWhatsapp className='text-4xl text-green-500' />
             <span className='font-semibold text-lg'>Whatsapp</span>
             <span className='text-gray-500'>+91 9973427703</span>
@@ -67,7 +67,7 @@ function Contact() {
         </div>
 
         {/* right part */}
-        <form onSubmit={handleSubmit} className='w-full md:w-1/2 space-y-5'>
+        <form onSubmit={handleSubmit} className='w-full md:w-1/2 space-y-5 rounded-lg mb-3'>
           <h3 className='text-xl font-semibold text-center'>Write me Your Feedback</h3>
 
           {/* Name Input */}
