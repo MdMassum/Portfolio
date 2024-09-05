@@ -1,6 +1,7 @@
 import React from 'react'
 import HomeConnect from '../../assets/HomeConnect.png'
 import NewsBhandar from '../../assets/newsbhandar.png'
+import portfolio from '../../assets/portfolio.png'
 import photo1 from '../../assets/work1.jpg'
 import Card from './card';
 
@@ -28,7 +29,7 @@ function MainProj() {
             description: "NewsBhandar is a real-time news aggregator that provides users with updated news across various categories. Leveraging APIs for real-time data fetching, the platform ensures users stay informed with the latest news as it unfolds."
         },
         {
-            image: photo1,
+            image: portfolio,
             git: "https://github.com/MdMassum/Portfolio",
             live: "https://github.com/MdMassum/Portfolio",
             name: "Portfolio",

@@ -1,8 +1,13 @@
 import React, { useState } from 'react';
+import { IoGrid } from "react-icons/io5";
+import { IoHomeOutline } from "react-icons/io5";
+import { MdContactMail } from "react-icons/md";
+import { FaGraduationCap } from "react-icons/fa6";
+import { LuFileSignature } from "react-icons/lu";
 
 function Header() {
     const [isOpen, setIsOpen] = useState(false);
-    
+
     const nav = [
         { label: "Home", href: "#home" },
         { label: "About", href: "#about" },
@@ -11,48 +16,54 @@ function Header() {
         { label: "Contact", href: "#contact" },
     ];
 
+    const Mobnav = [
+        { label: "About", href: "#about", logo: <IoHomeOutline className="w-6 h-6 text-gray-800" /> },
+        { label: "Skills", href: "#skills", logo: <FaGraduationCap className="w-6 h-6 text-gray-800" /> },
+        { label: "Portfolio", href: "#portfolio", logo: <LuFileSignature className="w-6 h-6 text-gray-800" /> },
+        { label: "Contact", href: "#contact", logo: <MdContactMail className="w-6 h-6 text-gray-800" /> },
+    ];
+
     const toggleMenu = () => {
         setIsOpen(!isOpen);
     };
 
     return (
-        <div className='flex justify-between items-center px-7 py-2 md:px-40 md:py-4 bg-white shadow-md sticky top-0 z-50 '>
+        <header className='flex justify-between items-center px-7 py-3 md:px-40 md:py-4 bg-white shadow-md sticky top-0 z-50'>
             <div>
                 <h2 className='text-2xl md:text-3xl font-bold text-gray-800'>M. Emamudin</h2>
             </div>
-            <div>
-                <ul className='hidden md:flex gap-6'>
-                    {nav.map((nav, idx) => (
-                        <li key={idx}>
-                            <a href={nav.href} className='text-gray-600 hover:text-gray-900 font-medium'>
-                                {nav.label}
-                            </a>
-                        </li>
-                    ))}
-                </ul>
-                <div className='md:hidden'>
-                    <button onClick={toggleMenu} className='text-gray-600 focus:outline-none'>
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
-                        </svg>
-                    </button>
-                </div>
-            </div>
+            {/* Desktop Navigation */}
+            <nav className='hidden md:flex gap-8'>
+                {nav.map((nav, idx) => (
+                    <a key={idx} href={nav.href} className='text-gray-600 hover:text-gray-900 font-medium transition-colors'>
+                        {nav.label}
+                    </a>
+                ))}
+            </nav>
             {/* Mobile Menu */}
             {isOpen && (
-                <div className='md:hidden absolute top-16 left-0 right-0 bg-white shadow-lg py-4'>
-                    <ul className='flex flex-col items-center gap-4'>
-                        {nav.map((nav, idx) => (
-                            <li key={idx}>
-                                <a href={nav.href} className='text-gray-600 hover:text-gray-900 font-medium'>
-                                    {nav.label}
-                                </a>
+                <div className='md:hidden fixed bottom-0 left-0 right-0 bg-white shadow-lg py-4'>
+                    <ul className='grid grid-cols-2 gap-6 px-4'>
+                        {Mobnav.map((nav, idx) => (
+                            <li key={idx} className=''>
+                                <div className='flex flex-col items-center'>
+                                    {nav.logo}
+                                    <a href={nav.href} className='text-gray-600 hover:text-gray-900 font-medium mt-1'>
+                                        {nav.label}
+                                    </a>
+                                </div>
                             </li>
                         ))}
                     </ul>
                 </div>
             )}
-        </div>
+            {/* Mobile Menu Button */}
+            <div className='md:hidden'>
+                <button onClick={toggleMenu} className='fixed bottom-24 right-6 z-50 bg-gray-100 p-3 rounded-full shadow-lg hover:bg-gray-200 transition-transform transform hover:scale-110'>
+                    <IoGrid className='w-6 h-6 text-gray-600' />
+                </button>
+            </div>
+        </header>
     );
 }
 

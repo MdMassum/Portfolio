@@ -24,8 +24,9 @@ function AboutData() {
         </div>
   
         {/* Description */}
-        <p className='text-gray-600 text-sm md:text-lg leading-relaxed'>
-          I'm a Frontend developer, I create web pages with UI/UX user interface. I have experience and many clients are happy with the projects carried out.
+        <p className='text-gray-600 line-clamp-4 text-sm md:text-md leading-relaxed'>
+        <span className='hidden md:flex'>Hi, I'm Mohammad Emamudin, a final-year BTech CSE student at Mittal Institute of Technology. </span>
+        I've developed several projects using the MERN stack and solved over 350 problems on LeetCode. Aspiring to become a software developer, I'm passionate about building innovative web applications and continuously honing my skills.
         </p>
   
         {/* Download CV Button */}
