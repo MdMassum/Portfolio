@@ -1,6 +1,6 @@
 import React from 'react'
 import profile from '../../assets/profile.jpg'
-import AboutData from './AboutData'
+import AboutData from './AboutData.jsx'
 
 function About() {
     return (

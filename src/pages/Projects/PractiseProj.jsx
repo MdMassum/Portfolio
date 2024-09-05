@@ -2,7 +2,7 @@ import React from 'react'
 import amazon from '../../assets/amazon.png'
 import weather from '../../assets/weather.png'
 import tictactoe from '../../assets/tictactoe.png'
-import Card from './card';
+import Card from './Card.jsx';
 
 function PractiseProj() {
     const projects = [
