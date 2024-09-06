@@ -8,14 +8,14 @@ function Education() {
         {/* Data */}
         <div className="text-right">
           <h4 className="font-semibold">Btech Cse</h4>
-          <p className="text-gray-600">Mittal Institute Of Technology</p>
+          <p className="text-gray-600 dark:text-gray-200">Mittal Institute Of Technology</p>
           <p className="text-gray-400 text-sm">2021 - Present</p>
         </div>
       </div>
       
       {/* Timeline Circle */}
       <div className="flex -mx-1.5 ">
-        <div className="w-3 h-3 bg-black rounded-full"></div>
+        <div className="w-3 h-3 bg-black dark:bg-white rounded-full"></div>
       </div>
       
       {/* Spacer for right side (empty column) */}
@@ -26,7 +26,7 @@ function Education() {
 
       {/* Timeline Circle */}
       <div className="flex -mx-1.5 z-50 my-2">
-        <div className="w-3 h-3 bg-black rounded-full"></div>
+        <div className="w-3 h-3 bg-black dark:bg-white rounded-full"></div>
       </div>
 
       {/* Second item - Right Side */}
@@ -34,7 +34,7 @@ function Education() {
         {/* Data */}
         <div>
           <h4 className="font-semibold">Class XII</h4>
-          <p className="text-gray-600">Kendriya Vidyalaya</p>
+          <p className="text-gray-600 dark:text-gray-300">Kendriya Vidyalaya</p>
           <p className="text-gray-400 text-sm">2020 - 2021</p>
         </div>
       </div>
@@ -44,14 +44,14 @@ function Education() {
         {/* Data */}
         <div className="text-right">
           <h4 className="font-semibold">Class X</h4>
-          <p className="text-gray-600">St.Thomas Residential</p>
+          <p className="text-gray-600 dark:text-gray-300">St.Thomas Residential</p>
           <p className="text-gray-400 text-sm">2018 - 2019</p>
         </div>
       </div>
       
       {/* Timeline Circle */}
       <div className="flex -mx-1.5">
-        <div className="w-3 h-3 bg-black rounded-full my-2"></div>
+        <div className="w-3 h-3 bg-black dark:bg-white rounded-full my-2"></div>
       </div>
 
       {/* Spacer for right side (empty column) */}

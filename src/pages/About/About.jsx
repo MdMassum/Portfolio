@@ -4,10 +4,10 @@ import AboutData from './AboutData.jsx'
 
 function About() {
     return (
-      <div id='about' className='flex flex-col items-center justify-around md:justify-between p-7 md:px-44 gap-6'>
+      <div id='about' className='flex flex-col items-center justify-around md:justify-between p-7 md:px-44 gap-6 dark:bg-slate-800 dark:text-white'>
         {/* Section Heading */}
         <h2 className='text-3xl md:text-5xl font-bold text-center md:text-left'>About Me</h2>
-        <span className='text-gray-500 text-sm md:text-lg text-center md:text-left -mt-3'>My Introduction</span>
+        <span className='text-gray-500 text-sm md:text-lg text-center md:text-left -mt-3 dark:text-gray-300 '>My Introduction</span>
   
         {/* Profile Image and About Data */}
         <div className='flex flex-col md:flex-row justify-between items-center gap-10 md:gap-20 w-full'>

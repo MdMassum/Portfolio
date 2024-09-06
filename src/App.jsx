@@ -1,4 +1,5 @@
 // import './App.css'
+import { useEffect, useState } from "react"
 import Footer from "./components/Footer"
 import Header from "./components/Header"
 import ScrollUp from "./components/ScrollUp"
@@ -11,9 +12,26 @@ import Skills from "./pages/Skills/Skills"
 
 function App() {
 
+  const [themeMode, setThemeMode] = useState("light")
+
+  const lightTheme = ()=>{
+    setThemeMode("light")
+  }
+
+  const darkTheme = () =>{
+    setThemeMode("dark")
+  }
+
+  useEffect(() => {
+
+    document.querySelector("html").classList.remove("light", "dark");
+    document.querySelector('html').classList.add(themeMode);
+
+  }, [themeMode])
+
   return (
     <>
-      <Header/>
+      <Header darkTheme={darkTheme} lightTheme={lightTheme} themeMode={themeMode} />
       <Home/>
       <About/>
       <Skills/>

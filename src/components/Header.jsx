@@ -4,9 +4,20 @@ import { IoHomeOutline } from "react-icons/io5";
 import { MdContactMail } from "react-icons/md";
 import { FaGraduationCap } from "react-icons/fa6";
 import { LuFileSignature } from "react-icons/lu";
+import { FaCloudMoon } from "react-icons/fa";
+import { MdSunny } from "react-icons/md";
 
-function Header() {
+function Header({darkTheme,lightTheme,themeMode}) {
     const [isOpen, setIsOpen] = useState(false);
+
+    const handleToggle = ()=>{
+        if(themeMode == 'light'){
+            darkTheme();
+        }
+        else{
+            lightTheme();
+        }
+    }
 
     const nav = [
         { label: "Home", href: "#home" },
@@ -17,10 +28,17 @@ function Header() {
     ];
 
     const Mobnav = [
-        { label: "About", href: "#about", logo: <IoHomeOutline className="w-6 h-6 text-gray-800" /> },
-        { label: "Skills", href: "#skills", logo: <FaGraduationCap className="w-6 h-6 text-gray-800" /> },
-        { label: "Portfolio", href: "#portfolio", logo: <LuFileSignature className="w-6 h-6 text-gray-800" /> },
-        { label: "Contact", href: "#contact", logo: <MdContactMail className="w-6 h-6 text-gray-800" /> },
+        { label: "About", href: "#about", 
+        logo: <IoHomeOutline className="w-6 h-6 text-gray-800 dark:text-white" /> },
+
+        { label: "Skills", href: "#skills", 
+        logo: <FaGraduationCap className="w-6 h-6 text-gray-800 dark:text-white" /> },
+
+        { label: "Portfolio", href: "#portfolio", 
+        logo: <LuFileSignature className="w-6 h-6 text-gray-800 dark:text-white" /> },
+
+        { label: "Contact", href: "#contact", 
+        logo: <MdContactMail className="w-6 h-6 text-gray-800 dark:text-white" /> },
     ];
 
     const toggleMenu = () => {
@@ -28,27 +46,34 @@ function Header() {
     };
 
     return (
-        <header className='flex justify-between items-center px-7 py-3 md:px-40 md:py-4 bg-white shadow-md sticky top-0 z-50'>
+        <header className='flex justify-between items-center px-14 py-3 md:px-40 md:py-4 bg-white shadow-md sticky top-0 z-50 dark:bg-slate-900 dark:text-white'>
             <div>
-                <h2 className='text-2xl md:text-3xl font-bold text-gray-800'>M. Emamudin</h2>
+                <h2 className='text-2xl md:text-3xl font-bold text-gray-800 dark:text-white'>M. Emamudin</h2>
             </div>
             {/* Desktop Navigation */}
+            <div className='flex justify-center items-center gap-8'>
             <nav className='hidden md:flex gap-8'>
                 {nav.map((nav, idx) => (
-                    <a key={idx} href={nav.href} className='text-gray-600 hover:text-gray-900 font-medium transition-colors'>
+                    <a key={idx} href={nav.href} className='text-gray-600 hover:text-gray-900 font-medium transition-colors dark:text-gray-300 hover:dark:text-white'>
                         {nav.label}
                     </a>
                 ))}
             </nav>
+
+            {/* dark and light themeMode */}
+            {
+                themeMode == 'light'? <MdSunny onClick={handleToggle} className='w-8 h-8'/> : <FaCloudMoon onClick={handleToggle} className='w-8 h-8'/>
+            }
+            </div>
             {/* Mobile Menu */}
             {isOpen && (
-                <div className='md:hidden fixed bottom-0 left-0 right-0 bg-white shadow-lg py-4'>
+                <div className='md:hidden fixed bottom-0 left-0 right-0 bg-white shadow-lg py-4 dark:bg-slate-900'>
                     <ul className='grid grid-cols-2 gap-6 px-4'>
                         {Mobnav.map((nav, idx) => (
                             <li key={idx} className=''>
                                 <div className='flex flex-col items-center'>
                                     {nav.logo}
-                                    <a href={nav.href} className='text-gray-600 hover:text-gray-900 font-medium mt-1'>
+                                    <a href={nav.href} className='text-gray-600 hover:text-gray-900 font-medium mt-1 dark:text-gray-300 dark:hover:text-white'>
                                         {nav.label}
                                     </a>
                                 </div>

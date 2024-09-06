@@ -30,10 +30,10 @@ function Data() {
   }, [charIndex, index]);
 
   return (
-    <div className='flex flex-col gap-4 text-center md:text-left mt-4'>
+    <div className='flex flex-col gap-4 text-center md:text-left mt-4 dark:bg-slate-700'>
       {/* Name Heading */}
       <div className='flex gap-1 items-center justify-end'>
-        <h1 className='text-3xl md:text-6xl font-bold text-gray-800'>
+        <h1 className='text-3xl md:text-6xl font-bold text-gray-800 dark:text-white'>
           Md Emamudin
         </h1>
         <img src={hand} className='md:w-12 md:h-12' />
@@ -41,17 +41,17 @@ function Data() {
       
       
       {/* Job Title */}
-      <h3 className='text-lg md:text-2xl font-semibold text-gray-600'>
-      _________{displayedText}
+      <h3 className='text-lg md:text-2xl font-semibold text-gray-600 dark:text-white'>
+      ________{displayedText}
       </h3>
       
       {/* Description */}
-      <p className='text-sm md:text-lg text-gray-500 max-w-md mx-auto md:mx-0'>
+      <p className='text-sm md:text-lg text-gray-500 max-w-md mx-auto md:mx-0 dark:text-gray-300 '>
       "Welcome, to my portfolio. Do explore my projects and journey towards becoming a skilled software developer!"
       </p>
 
       <div className='mt-4 mx-auto md:mx-0'>
-      <a href="#contact"><button className='flex bg-black text-white p-3 rounded-xl  hover:text-red-500'>Say Hello  <CiLocationArrow1 className='bg-transparent mx-1' />
+      <a href="#contact"><button className='flex bg-black text-white p-3 rounded-xl  hover:text-red-500 dark:bg-white dark:text-black dark:hover:text-red-600'>Say Hello  <CiLocationArrow1 className='bg-transparent mx-1' />
       </button></a>
       </div>
       

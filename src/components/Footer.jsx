@@ -30,10 +30,10 @@ function Footer() {
     ];
 
     return (
-        <footer className="flex flex-col justify-center items-center px-7 py-6 md:px-20 md:py-8 space-y-6 md:space-y-8 shadow-[0_1px_6px_rgba(0,0,0,0.2)]">
+        <footer className="flex flex-col justify-center items-center px-7 py-6 md:px-20 md:py-8 space-y-6 md:space-y-8 shadow-[0_1px_6px_rgba(0,0,0,0.2)] dark:bg-slate-900">
             {/* Footer Brand */}
             <div>
-                <h2 className="text-3xl font-bold text-gray-600">M. Emamudin</h2>
+                <h2 className="text-3xl font-bold text-gray-600 dark:text-white">M. Emamudin</h2>
             </div>
 
             {/* Navigation Links */}
@@ -43,7 +43,7 @@ function Footer() {
                         <li key={idx}>
                             <a
                                 href={nav.href}
-                                className="text-gray-500 hover:text-black transition duration-300 ease-in-out font-medium"
+                                className="text-gray-500 hover:text-black transition duration-300 ease-in-out font-medium dark:text-gray-300 hover:dark:text-white"
                             >
                                 {nav.label}
                             </a>
@@ -61,7 +61,7 @@ function Footer() {
                                 href={logo.href}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-gray-500 hover:text-black transition duration-300 ease-in-out"
+                                className="text-gray-500 hover:text-black transition duration-300 ease-in-out dark:text-gray-300 hover:dark:text-white"
                             >
                                 {logo.item}
                             </a>
@@ -71,7 +71,7 @@ function Footer() {
             </div>
 
             {/* Footer Copyright */}
-            <span className="text-gray-500 text-sm">© M. Emamudin. All Rights Reserved</span>
+            <span className="text-gray-500 text-sm dark:text-white">© M. Emamudin. All Rights Reserved</span>
         </footer>
     );
 }

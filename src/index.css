@@ -8,3 +8,7 @@
 body {
   margin: 0;
 }
+html.dark {
+  /* background-color: #1e293b; */
+  background-color: #334155;
+}
