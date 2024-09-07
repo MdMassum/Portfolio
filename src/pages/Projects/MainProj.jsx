@@ -31,7 +31,7 @@ function MainProj() {
         {
             image: portfolio,
             git: "https://github.com/MdMassum/Portfolio",
-            live: "https://github.com/MdMassum/Portfolio",
+            live: "https://connectmmassum.vercel.app/",
             name: "Portfolio",
             description: "My Personal Portfolio Website"
         },
