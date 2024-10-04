@@ -7,7 +7,7 @@ function Experience() {
       <div className="flex justify-end border-r-2 border-gray-300 pr-4">
         {/* Data */}
         <div className="text-right">
-          <h4 className="font-semibold">FirstRicoz Private Limited</h4>
+          <h4 className="font-semibold">Ricoz Private Limited</h4>
           <p className="text-gray-600 dark:text-gray-300">FullStack Intern</p>
           <p className="text-gray-400 text-sm">sep 2024 - Present</p>
         </div>
