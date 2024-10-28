@@ -12,7 +12,7 @@ function MainProj() {
             image: chatApp,
             git: "https://github.com/MdMassum/chat-box",
             live: "https://massumchatapp.vercel.app/",
-            name: "HomeConnect",
+            name: "ChatApp",
             description: "Built a Chat app which supports features like sending & receiving messages, creating group chats in RealTime using Pusher & Next.js"
         },
         {
