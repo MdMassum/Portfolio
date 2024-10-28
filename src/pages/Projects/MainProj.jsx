@@ -2,11 +2,19 @@ import React from 'react'
 import HomeConnect from '../../assets/Homeconnect.png'
 import NewsBhandar from '../../assets/newsbhandar.png'
 import portfolio from '../../assets/portfolio.png'
-import photo1 from '../../assets/work1.jpg'
+import chatApp from '../../assets/chatApp.png'
+
 import Card from './Card.jsx';
 
 function MainProj() {
     const projects = [
+        {
+            image: chatApp,
+            git: "https://github.com/MdMassum/chat-box",
+            live: "https://massumchatapp.vercel.app/",
+            name: "HomeConnect",
+            description: "Built a Chat app which supports features like sending & receiving messages, creating group chats in RealTime using Pusher & Next.js"
+        },
         {
             image: HomeConnect,
             git: "https://github.com/MdMassum/Estate_Project",
@@ -14,13 +22,7 @@ function MainProj() {
             name: "HomeConnect",
             description: "Developed a fullstack RealEstate Management app using MERN stack where users can create, edit or delete their listings and can contact landlords directly for property listings."
         },
-        {
-            image: photo1,
-            git: "https://github.com/MdMassum/inotebook",
-            live: "https://github.com/MdMassum/inotebook",
-            name: "InoteBook",
-            description: "Developed a full-stack web application for authenticated note-taking with CRUD operations using MERN Stack (MongoDB, Express, React, Node.js)."
-        },
+        
         {
             image: NewsBhandar,
             git: "https://github.com/MdMassum/NewsBhandar",

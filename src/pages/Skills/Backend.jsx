@@ -50,17 +50,17 @@ function Backend() {
           <div className="flex flex-col items-center text-center p-2">
             <div className='flex gap-2 items-center justify-center'>
               <IoMdCheckmarkCircleOutline className='text-md'/>
-              <p className='text-lg font-medium'>GitHub</p>
+              <p className='text-lg font-medium'>Typescript</p>
             </div>
             <span className='text-gray-500 text-xs'>Intermediate</span>
           </div>
 
           <div className="flex flex-col items-center text-center p-2">
             <div className='flex gap-2 items-center justify-center'>
-              {/* <IoMdCheckmarkCircleOutline className='text-md'/> */}
-              <p className='text-lg font-medium'></p>
+              <IoMdCheckmarkCircleOutline className='text-md'/>
+              <p className='text-lg font-medium'>Docker</p>
             </div>
-            <span className='text-gray-500 text-xs'></span>
+            <span className='text-gray-500 text-xs'>Begineer</span>
           </div>
         </div>
 

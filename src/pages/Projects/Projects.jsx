@@ -10,7 +10,7 @@ function Projects() {
         <h2 className='text-3xl md:text-5xl font-bold text-center md:text-left'>My Projects</h2>
         <span className='text-gray-500 text-sm md:text-lg text-center md:text-left mt-2 dark:text-gray-300 '>Most Recent Work</span>
         
-        <div className='flex justify-center gap-6 mb-1 mt-10'>
+        <div className='flex justify-center gap-6 mb-1 mt-10 text-xl'>
         <button
           className={`flex items-center gap-2 ${activeTab === 'Main' ? 'text-black dark:text-white font-semibold' : 'text-gray-500 dark:text-gray-300 '}`}
           onClick={() => setActiveTab('Main')}

@@ -8,7 +8,7 @@ function Card({ project }) {
         <img 
           src={project.image} 
           alt={project.name} 
-          className='h-[190px] md:h-[230px] w-full object-cover hover:scale-105 transition-transform duration-300'
+          className='h-[190px] md:h-[230px] w-full object-cover hover:scale-105 transition-transform duration-300 border-b  border-black'
         />
         <div className="p-4 flex flex-col">
           <p className='font-semibold text-slate-800 text-lg truncate mb-3'>{project.name}</p>

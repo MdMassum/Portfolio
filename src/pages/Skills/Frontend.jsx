@@ -20,7 +20,7 @@ function Frontend() {
           <div className="flex flex-col items-center text-center p-2">
             <div className='flex gap-2 items-center justify-center'>
               <IoMdCheckmarkCircleOutline className='text-md'/>
-              <p className='text-lg font-medium'>React</p>
+              <p className='text-lg font-medium'>NextJs</p>
             </div>
             <span className='text-gray-500 text-xs'>Intermediate</span>
           </div>
@@ -31,7 +31,7 @@ function Frontend() {
           <div className="flex flex-col items-center text-center p-2">
             <div className='flex gap-2 items-center justify-center'>
               <IoMdCheckmarkCircleOutline className='text-md'/>
-              <p className='text-lg font-medium'>CSS</p>
+              <p className='text-lg font-medium'>React</p>
             </div>
             <span className='text-gray-500 text-xs'>Intermediate</span>
           </div>

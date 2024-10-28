@@ -42,7 +42,7 @@ function Data() {
       
       {/* Job Title */}
       <h3 className='text-lg md:text-2xl font-semibold text-gray-600 dark:text-white'>
-      ________{displayedText}
+      <span className='hidden md:inline'>___</span>_____{displayedText}
       </h3>
       
       {/* Description */}

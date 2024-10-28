@@ -2,6 +2,7 @@ import React from 'react'
 import amazon from '../../assets/amazon.png'
 import weather from '../../assets/weather.png'
 import tictactoe from '../../assets/tictactoe.png'
+import photo1 from '../../assets/work1.jpg'
 import Card from './Card.jsx';
 
 function PractiseProj() {
@@ -26,6 +27,13 @@ function PractiseProj() {
             live: "https://mdmassum.github.io/Amazon-clone/",
             name: "Amazon-Clone",
             description: "Frontend Clone of Amazon Website Using Html & CSS"
+        },
+        {
+            image: photo1,
+            git: "https://github.com/MdMassum/inotebook",
+            live: "https://github.com/MdMassum/inotebook",
+            name: "InoteBook",
+            description: "Developed a full-stack web application for authenticated note-taking with CRUD operations using MERN Stack (MongoDB, Express, React, Node.js)."
         },
     ];
 
