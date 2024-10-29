@@ -3,6 +3,7 @@ import HomeConnect from '../../assets/Homeconnect.png'
 import NewsBhandar from '../../assets/newsbhandar.png'
 import portfolio from '../../assets/portfolio.png'
 import chatApp from '../../assets/chatApp.png'
+import Celestium from '../../assets/Celestium.png'
 
 import Card from './Card.jsx';
 
@@ -36,6 +37,13 @@ function MainProj() {
             live: "https://connectmmassum.vercel.app/",
             name: "Portfolio",
             description: "My Personal Portfolio Website"
+        },
+        {
+            image: Celestium,
+            git: "https://github.com/MdMassum/Celestium",
+            live: "https://masumcelestium.vercel.app/",
+            name: "Celstium",
+            description: "Its an ui of astrologer app that i made from scratch based on figma design"
         },
     ];
 
