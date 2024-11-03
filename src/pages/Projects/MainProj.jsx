@@ -19,7 +19,7 @@ function MainProj() {
         {
             image: HomeConnect,
             git: "https://github.com/MdMassum/Estate_Project",
-            live: "https://massum-estate.onrender.com/",
+            live: "https://masum-estate.vercel.app/",
             name: "HomeConnect",
             description: "Developed a fullstack RealEstate Management app using MERN stack where users can create, edit or delete their listings and can contact landlords directly for property listings."
         },
