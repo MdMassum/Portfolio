@@ -3,10 +3,18 @@ import amazon from '../../assets/amazon.png'
 import weather from '../../assets/weather.png'
 import tictactoe from '../../assets/tictactoe.png'
 import photo1 from '../../assets/work1.jpg'
+import NewsBhandar from '../../assets/newsbhandar.png'
 import Card from './Card.jsx';
 
 function PractiseProj() {
     const projects = [
+        {
+            image: NewsBhandar,
+            git: "https://github.com/MdMassum/NewsBhandar",
+            live: "https://news-bhandar.vercel.app/",
+            name: "NewsBhandar",
+            description: "NewsBhandar is a real-time news aggregator that provides users with updated news across various categories. Leveraging APIs for real-time data fetching, the platform ensures users stay informed with the latest news as it unfolds."
+        },
         {
             image: weather,
             git: "https://github.com/MdMassum/Weather-Proj",

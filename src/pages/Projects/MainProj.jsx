@@ -1,14 +1,29 @@
 import React from 'react'
 import HomeConnect from '../../assets/Homeconnect.png'
-import NewsBhandar from '../../assets/newsbhandar.png'
 import portfolio from '../../assets/portfolio.png'
 import chatApp from '../../assets/chatApp.png'
 import Celestium from '../../assets/Celestium.png'
+import codeTogether from '../../assets/codeTogether.png'
+import HostIt from '../../assets/HostIt.png'
 
 import Card from './Card.jsx';
 
 function MainProj() {
     const projects = [
+        {
+            image: codeTogether,
+            git: "https://github.com/MdMassum/CodeTogether",
+            live: "https://github.com/MdMassum/CodeTogether",
+            name: "CodeTogether",
+            description: "A virtual codespace for multiple coders to code simultaneously. Simultaneous work environment."
+        },
+        {
+            image: HostIt,
+            git: "https://github.com/MdMassum/HostIt",
+            live: "https://vercel-clone-lake.vercel.app/",
+            name: "HostIt",
+            description: "Host your website on my server because it is secured, it is fast and more reliable than yours i guess"
+        },
         {
             image: chatApp,
             git: "https://github.com/MdMassum/chat-box",
@@ -22,14 +37,6 @@ function MainProj() {
             live: "https://masum-estate.vercel.app/",
             name: "HomeConnect",
             description: "Developed a fullstack RealEstate Management app using MERN stack where users can create, edit or delete their listings and can contact landlords directly for property listings."
-        },
-        
-        {
-            image: NewsBhandar,
-            git: "https://github.com/MdMassum/NewsBhandar",
-            live: "https://news-bhandar.vercel.app/",
-            name: "NewsBhandar",
-            description: "NewsBhandar is a real-time news aggregator that provides users with updated news across various categories. Leveraging APIs for real-time data fetching, the platform ensures users stay informed with the latest news as it unfolds."
         },
         {
             image: portfolio,
