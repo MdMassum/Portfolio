@@ -16,7 +16,7 @@ function Home() {
         className='flex flex-col overflow-hidden'
       >
 
-        <div className='flex flex-col md:flex-row items-center justify-around md:justify-between p-7 md:px-40 mt-8 dark:bg-slate-800'>
+        <div className='flex flex-col md:flex-row items-center justify-around md:justify-between p-7 md:px-40 mt-8 dark:bg-slate-700'>
 
           {/* Social Section */}
           <motion.div

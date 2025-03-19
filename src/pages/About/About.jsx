@@ -5,7 +5,7 @@ import profile from '../../assets/profile.jpg';
 import AboutData from './AboutData.jsx';
 
 function About() {
-    const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.3 });
+    const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
 
     return (
       <motion.div 

@@ -6,7 +6,7 @@ import PractiseProj from './PractiseProj';
 
 function Projects() {
     const [activeTab, setActiveTab] = useState('Main');
-    const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
+    const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 });
 
     return (
         <motion.div 
