@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { IoGrid } from "react-icons/io5";
+import { motion } from 'framer-motion';
 import { IoHomeOutline } from "react-icons/io5";
 import { MdContactMail } from "react-icons/md";
 import { FaGraduationCap } from "react-icons/fa6";
@@ -38,7 +39,11 @@ function Header({ darkTheme, lightTheme, themeMode }) {
     };
 
     return (
-        <header className='flex justify-between items-center px-14 py-3 md:px-40 md:py-4 bg-white shadow-md sticky top-0 z-50 dark:bg-slate-900 dark:text-white'>
+        <motion.header 
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className='flex justify-between items-center px-14 py-3 md:px-40 md:py-4 bg-white shadow-md sticky top-0 z-50 dark:bg-slate-900 dark:text-white'>
             <div>
                 <h2 className='text-2xl md:text-3xl font-bold text-gray-800 dark:text-white'>M. Emamudin</h2>
             </div>
@@ -46,38 +51,49 @@ function Header({ darkTheme, lightTheme, themeMode }) {
             <div className='flex justify-center items-center gap-8'>
                 <nav className='hidden md:flex gap-8'>
                     {nav.map((nav, idx) => (
-                        <a key={idx} href={nav.href} className='text-gray-600 hover:text-gray-900 font-medium transition-colors dark:text-gray-300 hover:dark:text-white'>
+                        <motion.a key={idx} href={nav.href} className='text-gray-600 hover:text-gray-900 font-medium transition-colors dark:text-gray-300 hover:dark:text-white'
+                        whileHover={{ scale: 1.1, color: themeMode === 'light' ? '#000' : '#fff' }}
+                        transition={{ duration: 0.2 }}>
                             {nav.label}
-                        </a>
+                        </motion.a>
                     ))}
                 </nav>
 
                 {/* Dark and Light Theme Toggle */}
-                <div className='hidden md:flex'>
+                <motion.div 
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                className='hidden md:flex'>
                 {
                     themeMode === 'light'
                         ? <MdSunny onClick={handleToggle} className='w-8 h-8 cursor-pointer' />
                         : <FaCloudMoon onClick={handleToggle} className='w-8 h-8 cursor-pointer' />
                 }
-                </div>
+                </motion.div>
             </div>
 
             {/* Mobile Menu */}
             {isOpen && (
-                <div className='md:hidden fixed bottom-0 left-0 right-0 bg-white shadow-lg py-4 dark:bg-slate-900'>
+                <motion.div 
+                initial={{ y: '100%' }}
+                animate={isOpen ? { y: 0 } : { y: '100%' }}
+                transition={{ type: "spring", stiffness: 100 }}
+                className='md:hidden fixed bottom-0 left-0 right-0 bg-white shadow-lg py-4 dark:bg-slate-900'>
                     <ul className='grid grid-cols-2 gap-6 px-4'>
                         {Mobnav.map((nav, idx) => (
                             <li key={idx}>
-                                <div className='flex flex-col items-center'>
+                                <motion.div 
+                                whileHover={{ scale: 1.1 }}
+                                className='flex flex-col items-center'>
                                     {nav.logo}
                                     <a href={nav.href} className='text-gray-600 hover:text-gray-900 font-medium mt-1 dark:text-gray-300 dark:hover:text-white'>
                                         {nav.label}
                                     </a>
-                                </div>
+                                </motion.div>
                             </li>
                         ))}
                     </ul>
-                </div>
+                </motion.div>
             )}
 
             {/* Mobile Menu Button */}
@@ -95,7 +111,7 @@ function Header({ darkTheme, lightTheme, themeMode }) {
                         : <FaCloudMoon onClick={handleToggle} className='fixed top-4 right-12 w-8 h-8 cursor-pointer' />
                 }
             </div>
-        </header>
+        </motion.header>
     );
 }
 

@@ -1,11 +1,11 @@
-import React from 'react'
-import HomeConnect from '../../assets/Homeconnect.png'
-import portfolio from '../../assets/portfolio.png'
-import chatApp from '../../assets/chatApp.png'
-import Celestium from '../../assets/Celestium.png'
-import codeTogether from '../../assets/codeTogether.png'
-import HostIt from '../../assets/HostIt.png'
-
+import React from 'react';
+import { motion } from 'framer-motion';
+import HomeConnect from '../../assets/Homeconnect.png';
+import portfolio from '../../assets/portfolio.png';
+import chatApp from '../../assets/chatApp.png';
+import Celestium from '../../assets/Celestium.png';
+import codeTogether from '../../assets/codeTogether.png';
+import HostIt from '../../assets/HostIt.png';
 import Card from './Card.jsx';
 
 function MainProj() {
@@ -43,7 +43,7 @@ function MainProj() {
             git: "https://github.com/MdMassum/Portfolio",
             live: "https://connectmmassum.vercel.app/",
             name: "Portfolio",
-            description: "My Personal Portfolio Website"
+            description: "My Personal Portfolio Website built using react, styled using tailwind css, animated using framer-motion and email functionality using email js."
         },
         {
             image: Celestium,
@@ -56,13 +56,32 @@ function MainProj() {
 
     return (
         <div className='container mx-auto p-5'>
-            <div className='flex flex-wrap justify-center gap-6'>
+            <motion.div 
+                className='flex flex-wrap justify-center gap-6'
+                initial="hidden"
+                animate="visible"
+                variants={{
+                    visible: { transition: { staggerChildren: 0.2 } }
+                }}
+            >
                 {projects.map((project, idx) => (
-                    <Card key={idx} project={project} />
+                    <motion.div
+                        key={idx}
+                        variants={{
+                            hidden: { opacity: 0, y: 50 },
+                            visible: { opacity: 1, y: 0 }
+                        }}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.5 }}
+                    >
+                        <Card project={project} />
+                    </motion.div>
                 ))}
-            </div>
+            </motion.div>
         </div>
-    )
+    );
 }
 
 export default MainProj;

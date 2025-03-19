@@ -1,9 +1,10 @@
-import React from 'react'
-import amazon from '../../assets/amazon.png'
-import weather from '../../assets/weather.png'
-import tictactoe from '../../assets/tictactoe.png'
-import photo1 from '../../assets/work1.jpg'
-import NewsBhandar from '../../assets/newsbhandar.png'
+import React from 'react';
+import { motion } from 'framer-motion';
+import amazon from '../../assets/amazon.png';
+import weather from '../../assets/weather.png';
+import tictactoe from '../../assets/tictactoe.png';
+import photo1 from '../../assets/work1.jpg';
+import NewsBhandar from '../../assets/newsbhandar.png';
 import Card from './Card.jsx';
 
 function PractiseProj() {
@@ -47,13 +48,32 @@ function PractiseProj() {
 
     return (
         <div className='container mx-auto p-5'>
-            <div className='flex flex-wrap justify-center gap-6'>
+            <motion.div 
+                className='flex flex-wrap justify-center gap-6'
+                initial="hidden"
+                animate="visible"
+                variants={{
+                    visible: { transition: { staggerChildren: 0.2 } }
+                }}
+            >
                 {projects.map((project, idx) => (
-                    <Card key={idx} project={project} />
+                    <motion.div
+                        key={idx}
+                        variants={{
+                            hidden: { opacity: 0, y: 50 },
+                            visible: { opacity: 1, y: 0 }
+                        }}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.5 }}
+                    >
+                        <Card project={project} />
+                    </motion.div>
                 ))}
-            </div>
+            </motion.div>
         </div>
-    )
+    );
 }
 
 export default PractiseProj;

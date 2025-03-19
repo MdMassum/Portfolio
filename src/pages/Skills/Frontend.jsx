@@ -1,14 +1,29 @@
 import React from 'react';
+import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 import { IoMdCheckmarkCircleOutline } from "react-icons/io";
 
 function Frontend() {
+  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
+
   return (
-    <div className='flex flex-col items-center p-6 bg-white shadow-lg rounded-lg max-w-md mx-auto transform transition-transform duration-300 hover:scale-105 cursor-pointer'>
+    <motion.div 
+      ref={ref}
+      initial={{ opacity: 0, y: 20 }}
+      animate={inView ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.8, delay: 0.2 }}
+      className='flex flex-col items-center p-6 bg-white shadow-lg rounded-lg max-w-md mx-auto transform transition-transform duration-300 hover:scale-105 cursor-pointer'
+    >
       <h3 className='text-2xl font-semibold mb-6 text-center'>Frontend</h3>
       <div className='flex flex-col'>
         
         {/* First Row */}
-        <div className="grid grid-cols-2 gap-2">
+        <motion.div
+          initial={{ opacity: 0, x: -20 }}
+          animate={inView ? { opacity: 1, x: 0 } : {}}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="grid grid-cols-2 gap-2"
+        >
           <div className="flex flex-col items-center text-center p-2">
             <div className='flex gap-2 items-center justify-center'>
               <IoMdCheckmarkCircleOutline className='text-md'/>
@@ -24,10 +39,15 @@ function Frontend() {
             </div>
             <span className='text-gray-500 text-xs'>Intermediate</span>
           </div>
-        </div>
+        </motion.div>
 
         {/* Second Row */}
-        <div className="grid grid-cols-2 gap-2">
+        <motion.div
+          initial={{ opacity: 0, x: -20 }}
+          animate={inView ? { opacity: 1, x: 0 } : {}}
+          transition={{ duration: 0.8, delay: 0.6 }}
+          className="grid grid-cols-2 gap-2"
+        >
           <div className="flex flex-col items-center text-center p-2">
             <div className='flex gap-2 items-center justify-center'>
               <IoMdCheckmarkCircleOutline className='text-md'/>
@@ -43,10 +63,15 @@ function Frontend() {
             </div>
             <span className='text-gray-500 text-xs'>Intermediate</span>
           </div>
-        </div>
+        </motion.div>
 
         {/* Third Row */}
-        <div className="grid grid-cols-2 gap-2">
+        <motion.div
+          initial={{ opacity: 0, x: -20 }}
+          animate={inView ? { opacity: 1, x: 0 } : {}}
+          transition={{ duration: 0.8, delay: 0.8 }}
+          className="grid grid-cols-2 gap-2"
+        >
           <div className="flex flex-col items-center text-center p-2">
             <div className='flex gap-2 items-center justify-center'>
               <IoMdCheckmarkCircleOutline className='text-md'/>
@@ -62,11 +87,11 @@ function Frontend() {
             </div>
             <span className='text-gray-500 text-xs'>Intermediate</span>
           </div>
-        </div>
+        </motion.div>
 
       </div>
-    </div>
-  )
+    </motion.div>
+  );
 }
 
 export default Frontend;

@@ -1,4 +1,6 @@
 import React from 'react';
+import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 import { FaInstagram, FaLinkedin, FaGithub } from "react-icons/fa";
 import { SiLeetcode } from "react-icons/si";
 
@@ -29,50 +31,80 @@ function Footer() {
         },
     ];
 
+    const { ref, inView } = useInView({
+        triggerOnce: true,
+        threshold: 0.2
+    });
+
     return (
-        <footer className="flex flex-col justify-center items-center px-7 py-6 md:px-20 md:py-8 space-y-6 md:space-y-8 shadow-[0_1px_6px_rgba(0,0,0,0.2)] dark:bg-slate-900">
+        <motion.footer
+            ref={ref}
+            initial={{ opacity: 0, y: 50 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 1 }}
+            className="flex flex-col justify-center items-center px-7 py-6 md:px-20 md:py-8 space-y-6 md:space-y-8 shadow-[0_1px_6px_rgba(0,0,0,0.2)] dark:bg-slate-900"
+        >
             {/* Footer Brand */}
-            <div>
+            <motion.div
+                initial={{ opacity: 0 }}
+                animate={inView ? { opacity: 1 } : {}}
+                transition={{ duration: 0.8, delay: 0.2 }}
+            >
                 <h2 className="text-3xl font-bold text-gray-600 dark:text-white">M. Emamudin</h2>
-            </div>
+            </motion.div>
 
             {/* Navigation Links */}
-            <nav>
+            <motion.nav
+                initial={{ opacity: 0 }}
+                animate={inView ? { opacity: 1 } : {}}
+                transition={{ duration: 0.8, delay: 0.4 }}
+            >
                 <ul className="flex gap-6">
-                    {nav.map((nav, idx) => (
+                    {nav.map((item, idx) => (
                         <li key={idx}>
                             <a
-                                href={nav.href}
+                                href={item.href}
                                 className="text-gray-500 hover:text-black transition duration-300 ease-in-out font-medium dark:text-gray-300 hover:dark:text-white"
                             >
-                                {nav.label}
+                                {item.label}
                             </a>
                         </li>
                     ))}
                 </ul>
-            </nav>
+            </motion.nav>
 
             {/* Social Media Icons */}
-            <div>
+            <motion.div
+                initial={{ opacity: 0 }}
+                animate={inView ? { opacity: 1 } : {}}
+                transition={{ duration: 0.8, delay: 0.6 }}
+            >
                 <ul className="flex gap-6 text-2xl">
-                    {logo.map((logo, idx) => (
+                    {logo.map((item, idx) => (
                         <li key={idx}>
                             <a
-                                href={logo.href}
+                                href={item.href}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="text-gray-500 hover:text-black transition duration-300 ease-in-out dark:text-gray-300 hover:dark:text-white"
                             >
-                                {logo.item}
+                                {item.item}
                             </a>
                         </li>
                     ))}
                 </ul>
-            </div>
+            </motion.div>
 
             {/* Footer Copyright */}
-            <span className="text-gray-500 text-sm dark:text-white">© M. Emamudin. All Rights Reserved</span>
-        </footer>
+            <motion.span
+                initial={{ opacity: 0 }}
+                animate={inView ? { opacity: 1 } : {}}
+                transition={{ duration: 0.8, delay: 0.8 }}
+                className="text-gray-500 text-sm dark:text-white"
+            >
+                © M. Emamudin. All Rights Reserved
+            </motion.span>
+        </motion.footer>
     );
 }
 
