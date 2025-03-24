@@ -13,7 +13,7 @@ function MainProj() {
         {
             image: codeTogether,
             git: "https://github.com/MdMassum/CodeTogether",
-            live: "https://github.com/MdMassum/CodeTogether",
+            live: "https://code-together-wine.vercel.app/",
             name: "CodeTogether",
             description: "A virtual codespace for multiple coders to code simultaneously. Simultaneous work environment."
         },
