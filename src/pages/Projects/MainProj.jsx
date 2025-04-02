@@ -5,7 +5,7 @@ import portfolio from '../../assets/portfolio.png';
 import chatApp from '../../assets/chatApp.png';
 import Celestium from '../../assets/Celestium.png';
 import codeTogether from '../../assets/codeTogether.png';
-import Axis_Exports from '../../assets/Axis_Exports.png';
+import Axis_Exports from '../../assets/axis_exports.png';
 import ecom from '../../assets/ecom.png';
 import HostIt from '../../assets/HostIt.png';
 import Card from './Card.jsx';
