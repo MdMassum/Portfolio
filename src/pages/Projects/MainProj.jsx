@@ -5,6 +5,8 @@ import portfolio from '../../assets/portfolio.png';
 import chatApp from '../../assets/chatApp.png';
 import Celestium from '../../assets/Celestium.png';
 import codeTogether from '../../assets/codeTogether.png';
+import Axis_Exports from '../../assets/Axis_Exports.png';
+import ecom from '../../assets/ecom.png';
 import HostIt from '../../assets/HostIt.png';
 import Card from './Card.jsx';
 
@@ -51,6 +53,20 @@ function MainProj() {
             live: "https://masumcelestium.vercel.app/",
             name: "Celstium",
             description: "Its an ui of astrologer app that i made from scratch based on figma design"
+        },
+        {
+            image: Axis_Exports,
+            git: "https://github.com/MdMassum/axis-exports",
+            live: "https://axis-exports.vercel.app/",
+            name: "Axis Exports",
+            description: "Herbal Product Selling app made for client with admin dashboard"
+        },
+        {
+            image: ecom,
+            git: "https://github.com/MdMassum/ecom",
+            live: "https://vocal-for-local.vercel.app/",
+            name: "Vocal For Local",
+            description: "Ecommerce app made for locals with seller and admin dashboard"
         },
     ];
 
