@@ -12,3 +12,6 @@ html.dark {
   /* background-color: #1e293b; */
   background-color: #334155;
 }
+.text-stroke{
+  -webkit-text-stroke: 2pt #000000;
+}

@@ -12,7 +12,7 @@ import Skills from "./pages/Skills/Skills"
 
 function App() {
 
-  const [themeMode, setThemeMode] = useState("light")
+  const [themeMode, setThemeMode] = useState("dark")
 
   const lightTheme = ()=>{
     setThemeMode("light")
