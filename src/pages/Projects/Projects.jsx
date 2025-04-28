@@ -15,7 +15,7 @@ function Projects() {
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 1 }}
             id='portfolio' 
-            className='flex flex-col items-center justify-around md:justify-between p-7 md:px-44 gap-2 dark:bg-slate-700 dark:text-white overflow-hidden'
+            className='flex flex-col items-center justify-around md:justify-between p-7 md:px-44 gap-2 dark:bg-gradient-to-b dark:from-black dark:via-gray-800 dark:to-black dark:text-white overflow-hidden'
         >
             <h2 className='text-3xl md:text-5xl font-bold text-center md:text-left'>My Projects</h2>
             <span className='text-gray-500 text-sm md:text-lg text-center md:text-left mt-2 dark:text-gray-300'>

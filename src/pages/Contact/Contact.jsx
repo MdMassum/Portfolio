@@ -41,7 +41,7 @@ function Contact() {
             initial={{ opacity: 0, y: 50 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 1 }}
-            className='flex flex-col items-center justify-center md:justify-between p-7 md:px-44 gap-8 dark:bg-slate-800 dark:text-white overflow-hidden'
+            className='flex flex-col items-center justify-center md:justify-between p-7 md:px-44 gap-8 dark:bg-gradient-to-b dark:from-black dark:via-gray-700 dark:to-black dark:text-white overflow-hidden'
         >
             <motion.h2
                 initial={{ opacity: 0, y: -20 }}

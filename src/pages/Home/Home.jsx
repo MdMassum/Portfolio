@@ -16,7 +16,7 @@ function Home() {
         className='flex flex-col overflow-hidden'
       >
 
-        <div className='flex flex-col md:flex-row items-center justify-around md:justify-between p-7 md:px-40 mt-8 dark:bg-slate-700'>
+        <div className='flex flex-col md:flex-row items-center justify-around md:justify-between p-7 md:px-40 mt-8 dark:bg-gradient-to-b dark:from-black dark:via-gray-800 dark:to-black'>
 
           {/* Social Section */}
           <motion.div
@@ -58,10 +58,10 @@ function Home() {
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.8, ease: "easeOut" }}
-          className='hidden md:block mx-80 mt-7 mb-20 dark:bg-slate-700'
+          className='hidden md:block mx-80 mt-7 mb-20 dark:bg-transparent'
         >
           <a href="#about">
-            <button className='flex justify-center items-center rounded-xl gap-1 px-4 py-2 hover:text-red-500 transition-all duration-300 ease-in-out dark:bg-slate-700 dark:text-white dark:hover:text-red-500'>
+            <button className='flex justify-center items-center rounded-xl gap-1 px-4 py-2 hover:text-red-500 transition-all duration-300 ease-in-out dark:bg-transparent border border-white dark:text-white dark:hover:text-red-500'>
                 <LuMouse />
                 <p>Scroll</p>
                 <FaArrowDown />

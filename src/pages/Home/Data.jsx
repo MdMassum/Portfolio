@@ -30,7 +30,7 @@ function Data() {
   }, [charIndex, index]);
 
   return (
-    <div className='flex flex-col gap-4 text-center md:text-left mt-4 dark:bg-slate-700 overflow-hidden'>
+    <div className='flex flex-col gap-4 text-center md:text-left mt-4 dark:bg-transparent overflow-hidden'>
       {/* Name Heading */}
       <motion.div
         initial={{ y: 20, opacity: 0 }}
@@ -78,7 +78,7 @@ function Data() {
         className='mt-4 mx-auto md:mx-0'
       >
         <a href="#contact">
-          <button className='flex bg-black text-white p-3 rounded-xl hover:text-red-500 dark:bg-white dark:text-black dark:hover:text-red-600'>
+          <button className='flex bg-black text-white p-3 rounded-xl hover:text-red-500 dark:bg-transparent dark:text-white border border-white dark:hover:text-red-600'>
             Say Hello <CiLocationArrow1 className='bg-transparent mx-1' />
           </button>
         </a>

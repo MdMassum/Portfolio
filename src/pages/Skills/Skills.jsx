@@ -14,7 +14,7 @@ function Skills() {
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 1 }}
       id='skills' 
-      className='flex flex-col items-center justify-around md:justify-between md:my-12 p-7 md:px-44 gap-2 dark:bg-slate-700 overflow-hidden'
+      className='flex flex-col items-center justify-around md:justify-between md:my-12 p-7 md:px-44 gap-2 dark:bg-gradient-to-b dark:from-black dark:via-gray-800 dark:to-black overflow-hidden'
     >
       {/* Heading */}
       <motion.h2

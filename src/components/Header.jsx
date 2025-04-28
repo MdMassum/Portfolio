@@ -43,7 +43,7 @@ function Header({ darkTheme, lightTheme, themeMode }) {
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className='flex justify-between items-center px-14 py-3 md:px-40 md:py-4 bg-white shadow-md sticky top-0 z-50 dark:bg-slate-900 dark:text-white'>
+        className='flex justify-between items-center px-14 py-3 md:px-40 md:py-4 bg-white shadow-md sticky top-0 z-50 dark:bg-transparent dark:md:backdrop-blur-md dark:text-white'>
             <div>
                 <h2 className='text-2xl md:text-3xl font-bold text-gray-800 dark:text-white'>M. Emamudin</h2>
             </div>
@@ -78,7 +78,7 @@ function Header({ darkTheme, lightTheme, themeMode }) {
                 initial={{ y: '100%' }}
                 animate={isOpen ? { y: 0 } : { y: '100%' }}
                 transition={{ type: "spring", stiffness: 100 }}
-                className='md:hidden fixed bottom-0 left-0 right-0 bg-white shadow-lg py-4 dark:bg-slate-900'>
+                className='md:hidden fixed bottom-0 left-0 right-0 bg-white shadow-lg py-4 dark:bg-transparent dark:backdrop-blur-lg'>
                     <ul className='grid grid-cols-2 gap-6 px-4'>
                         {Mobnav.map((nav, idx) => (
                             <li key={idx}>

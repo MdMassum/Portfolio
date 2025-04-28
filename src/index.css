@@ -9,8 +9,7 @@ body {
   margin: 0;
 }
 html.dark {
-  /* background-color: #1e293b; */
-  background-color: #334155;
+  background-color: #000000;
 }
 .text-stroke{
   -webkit-text-stroke: 2pt #000000;

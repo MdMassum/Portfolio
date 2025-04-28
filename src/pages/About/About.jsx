@@ -14,7 +14,7 @@ function About() {
         animate={inView ? { opacity: 1, x: 0 } : {}} 
         transition={{ duration: 1 }}
         id='about' 
-        className='flex flex-col items-center justify-around md:justify-between p-7 md:py-16 md:px-44 gap-6 dark:bg-slate-800 dark:text-white overflow-hidden'
+        className='flex flex-col items-center justify-around md:justify-between p-7 md:py-16 md:px-44 gap-6 dark:bg-gradient-to-b dark:from-black dark:via-gray-800 dark:to-black dark:text-white overflow-hidden'
       >
         {/* Heading */}
         <motion.h2
