@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { CiLocationArrow1 } from "react-icons/ci";
 import { motion } from 'framer-motion';
 import hand from '../../assets/hand.svg';
+import dotball from '../../assets/dotball.webp'
 
 function Data() {
   const texts = ["Web Developer", "Coder..."];
@@ -55,9 +55,9 @@ function Data() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8, delay: 0.6 }}
-        className='text-lg md:text-2xl font-semibold text-gray-600 dark:text-white'
+        className='text-lg md:text-2xl font-semibold text-gray-600 dark:text-white  min-h-[40px] md:min-h-[45px]'
       >
-        <span className='hidden md:inline'>___</span>_____{displayedText}
+        <span className='hidden md:inline dark:text-white'>________</span>{displayedText}
       </motion.h3>
 
       {/* Description */}
@@ -75,15 +75,16 @@ function Data() {
         initial={{ y: 20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8, delay: 1 }}
-        className='mt-4 mx-auto md:mx-0'
+        className='flex items-center mt-4 mx-auto md:mx-0'
       >
-        <a href="#contact">
-          <button className='flex bg-black text-white p-3 rounded-xl hover:text-red-500 dark:bg-transparent dark:text-white border border-white dark:hover:text-red-600'>
-            Say Hello <CiLocationArrow1 className='bg-transparent mx-1' />
-          </button>
-        </a>
+        
+        <div className='w-32 -mt-16'>
+        <img src={dotball} alt="" />
+        </div>
+        
       </motion.div>
     </div>
+    
   );
 }
 

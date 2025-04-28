@@ -71,7 +71,7 @@ function MainProj() {
     ];
 
     return (
-        <div className='container mx-auto p-5'>
+        <section className='container mx-auto p-5'>
             <motion.div 
                 className='flex flex-wrap justify-center gap-6'
                 initial="hidden"
@@ -96,7 +96,7 @@ function MainProj() {
                     </motion.div>
                 ))}
             </motion.div>
-        </div>
+        </section>
     );
 }
 

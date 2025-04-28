@@ -5,10 +5,11 @@ import Data from './Data';
 import profile from '../../assets/profile.jpg';
 import { LuMouse } from "react-icons/lu";
 import { FaArrowDown } from "react-icons/fa";
+import { CiLocationArrow1 } from 'react-icons/ci';
 
 function Home() {
     return (
-      <motion.div
+      <motion.section
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8, ease: "easeInOut" }}
@@ -58,17 +59,22 @@ function Home() {
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.8, ease: "easeOut" }}
-          className='hidden md:block mx-80 mt-7 mb-20 dark:bg-transparent'
+          className='hidden md:flex gap-4 mx-80 mb-20 dark:bg-transparent'
         >
           <a href="#about">
-            <button className='flex justify-center items-center rounded-xl gap-1 px-4 py-2 hover:text-red-500 transition-all duration-300 ease-in-out dark:bg-transparent border border-white dark:text-white dark:hover:text-red-500'>
+            <button className='flex justify-center items-center rounded-xl gap-1 px-5 py-2 hover:text-red-500 transition-all duration-300 ease-in-out dark:bg-transparent border border-white dark:text-white dark:hover:bg-white dark:hover:text-red-600'>
                 <LuMouse />
                 <p>Scroll</p>
                 <FaArrowDown />
             </button>
           </a>
+          <a href="#contact">
+          <button className='flex bg-black text-white py-2 px-5 rounded-xl hover:text-red-500 dark:bg-transparent dark:text-white border border-white dark:hover:bg-white dark:hover:text-red-600'>
+            Say Hello <CiLocationArrow1 className='bg-transparent mx-1' />
+          </button>
+        </a>
         </motion.div>
-      </motion.div>
+      </motion.section>
     );
   }
 

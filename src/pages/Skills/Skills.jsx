@@ -8,7 +8,7 @@ function Skills() {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.3 });
 
   return (
-    <motion.div 
+    <motion.section 
       ref={ref}
       initial={{ opacity: 0, y: 50 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -17,14 +17,28 @@ function Skills() {
       className='flex flex-col items-center justify-around md:justify-between md:my-12 p-7 md:px-44 gap-2 dark:bg-gradient-to-b dark:from-black dark:via-gray-800 dark:to-black overflow-hidden'
     >
       {/* Heading */}
-      <motion.h2
-        initial={{ opacity: 0, y: -20 }}
-        animate={inView ? { opacity: 1, y: 0 } : {}}
-        transition={{ duration: 0.8, delay: 0.2 }}
-        className='text-3xl md:text-5xl font-bold text-center md:text-left dark:text-white'
-      >
-        Skills
-      </motion.h2>
+      <motion.div
+  initial="hidden"
+  animate={inView ? "visible" : "hidden"}
+  variants={{
+    hidden: { opacity: 0, y: -20 },
+    visible: { opacity: 1, y: 0 }
+  }}
+  transition={{ duration: 0.8, delay: 0.2 }}
+  className="relative inline-block text-center md:text-left"
+>
+  <h2 className="text-3xl md:text-5xl font-bold dark:text-white">
+    Skills
+  </h2>
+
+  <motion.span
+    initial={{ width: 0 }}
+    animate={inView ? { width: "60%" } : { width: 0 }}
+    transition={{ duration: 0.8, delay: 0.6 }}
+    className="block h-1 bg-red-500 mt-2 mx-auto md:mx-0"
+  />
+</motion.div>
+
 
       {/* Subheading */}
       <motion.span
@@ -46,7 +60,7 @@ function Skills() {
         <Frontend />
         <Backend />
       </motion.div>
-    </motion.div>
+    </motion.section>
   );
 }
 
