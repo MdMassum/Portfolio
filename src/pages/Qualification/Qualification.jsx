@@ -36,7 +36,7 @@ function Qualification() {
           initial={{ width: 0 }}
           animate={inView ? { width: "60%" } : { width: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="block h-1 bg-red-500 mt-2 mx-auto md:mx-0"
+          className="block h-1 bg-red-500 mt-2 md:mx-0"
         />
       </motion.div>
 

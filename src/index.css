@@ -14,3 +14,40 @@ html.dark {
 .text-stroke{
   -webkit-text-stroke: 2pt #000000;
 }
+
+@keyframes gradientText {
+  0% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Base light theme (default) */
+:root {
+  --color1: red;
+  --color2: black;
+  --color3: gray;
+  --color4: red;
+}
+
+/* Override for dark theme */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color1: red;
+    --color2: #2d2d2d;   /* dark gray */
+    --color3: white;
+    --color4: red;
+  }
+}
+
+.animate-gradient-text {
+  background: linear-gradient(90deg, var(--color1), var(--color2), var(--color3), var(--color4));
+  background-size: 300% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: gradientText 5s linear infinite;
+}
+

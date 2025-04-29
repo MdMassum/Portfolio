@@ -1,20 +1,20 @@
-import React, { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
-import hand from '../../assets/hand.svg';
-import dotball from '../../assets/dotball.webp'
+import React, { useEffect, useState } from "react";
+import { motion } from "framer-motion";
+import hand from "../../assets/hand.svg";
+import dotball from "../../assets/dotball.webp";
 
 function Data() {
   const texts = ["Web Developer", "Coder..."];
   const [displayedText, setDisplayedText] = useState("");
-  const [index, setIndex] = useState(0);  // Index of the current string
+  const [index, setIndex] = useState(0); // Index of the current string
   const [charIndex, setCharIndex] = useState(0); // Index of the current character
 
   useEffect(() => {
     // Clear text after the entire word is displayed
     if (charIndex === texts[index].length) {
       const timeout = setTimeout(() => {
-        setCharIndex(0);  // Reset character index for the next word
-        setIndex((prevIndex) => (prevIndex + 1) % texts.length);  // Move to next word
+        setCharIndex(0); // Reset character index for the next word
+        setIndex((prevIndex) => (prevIndex + 1) % texts.length); // Move to next word
         setDisplayedText(""); // Clear the displayed text for the next word
       }, 1000); // Pause before switching words
       return () => clearTimeout(timeout);
@@ -30,20 +30,26 @@ function Data() {
   }, [charIndex, index]);
 
   return (
-    <div className='flex flex-col gap-4 text-center md:text-left mt-4 dark:bg-transparent overflow-hidden'>
+    <div className="flex flex-col gap-4 text-center md:text-left mt-4 dark:bg-transparent ">
       {/* Name Heading */}
       <motion.div
         initial={{ y: 20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8, delay: 0.2 }}
-        className='flex gap-1 items-center ml-16 md:ml-0'
+        className="flex gap-1 items-center ml-16 md:ml-0 mt-6 md:-mt-3"
       >
-        <h1 className='text-3xl md:text-6xl font-bold text-gray-800 dark:text-white'>
+        <motion.h1
+          className="text-3xl md:text-6xl font-bold animate-gradient-text"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+        >
           Md Emamudin
-        </h1>
+        </motion.h1>
+
         <motion.img
           src={hand}
-          className='md:w-12 md:h-12'
+          className="md:w-12 md:h-12 "
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
           transition={{ duration: 0.5, delay: 0.4 }}
@@ -55,9 +61,10 @@ function Data() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8, delay: 0.6 }}
-        className='text-lg md:text-2xl font-semibold text-gray-600 dark:text-white  min-h-[40px] md:min-h-[45px]'
+        className="text-xl md:text-2xl font-semibold text-gray-600 dark:text-white  min-h-[40px] md:min-h-[45px]"
       >
-        <span className='hidden md:inline dark:text-white'>________</span>{displayedText}
+        <span className="hidden md:inline dark:text-white">________</span>
+        {displayedText}
       </motion.h3>
 
       {/* Description */}
@@ -65,9 +72,10 @@ function Data() {
         initial={{ y: 20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8, delay: 0.8 }}
-        className='text-sm md:text-lg text-gray-500 max-w-md mx-auto md:mx-0 dark:text-gray-300'
+        className="text-sm md:text-lg text-gray-500 max-w-md mx-auto md:mx-0 dark:text-gray-300"
       >
-        "Welcome, to my portfolio. Do explore my projects and journey towards becoming a skilled software developer!"
+        "Welcome, to my portfolio. Do explore my projects and journey towards
+        becoming a skilled software developer!"
       </motion.p>
 
       {/* Button */}
@@ -75,16 +83,13 @@ function Data() {
         initial={{ y: 20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8, delay: 1 }}
-        className='flex items-center mt-4 mx-auto md:mx-0'
+        className="flex items-center mt-4 mx-auto md:mx-0"
       >
-        
-        <div className='w-32 -mt-16'>
-        <img src={dotball} alt="" />
+        <div className="w-48 -mt-10 md:w-32 md:-mt-16">
+          <img src={dotball} alt="" />
         </div>
-        
       </motion.div>
     </div>
-    
   );
 }
 

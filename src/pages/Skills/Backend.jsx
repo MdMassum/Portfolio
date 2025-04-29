@@ -12,7 +12,7 @@ function Backend() {
       initial={{ opacity: 0, y: 20 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.8, delay: 0.2 }}
-      className='flex flex-col items-center p-6 bg-white shadow-lg rounded-lg min-w-[345px] mx-auto transform transition-transform duration-300 hover:scale-105 cursor-pointer'
+      className='flex flex-col items-center p-6 bg-white shadow-lg rounded-lg min-w-[345px] mx-auto transform transition-transform duration-300 hover:scale-105 cursor-pointer dark:bg-gradient-to-b dark:from-gray-300 dark:via-gray-50 dark:to-gray-400'
     >
       <h3 className='text-2xl font-semibold mb-6 text-center'>Backend</h3>
       <div className='flex flex-col'>

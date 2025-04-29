@@ -92,12 +92,13 @@ function Header({ darkTheme, lightTheme, themeMode }) {
       transition={{ duration: 0.5 }}
       className="flex justify-between items-center px-14 py-3 md:px-40 md:py-4 bg-white shadow-md sticky top-0 z-40 dark:bg-transparent dark:backdrop-blur-md dark:text-white dark:border-b border-gray-500"
     >
-      <div className="flex flex-col items-start gap-2 overflow-hidden">
+      <div className="flex flex-col items-start gap-1 md:gap-2 overflow-hidden">
+        
         <motion.h2
+          className='text-2xl md:text-3xl font-bold animate-gradient-text'
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-2xl md:text-3xl font-bold text-gray-800 dark:text-red-600"
+          transition={{ duration: 1 }}
         >
           M. Emamudin
         </motion.h2>

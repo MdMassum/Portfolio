@@ -41,7 +41,7 @@ function AboutData() {
         transition={{ duration: 0.8, delay: 0.2 }}
         className='flex flex-row items-center gap-6 md:gap-10'
       >
-        <div className='w-46 flex flex-col shadow-md justify-center items-center p-4 ml-10 md:ml-0 rounded-lg bg-white hover:scale-105 transition-transform ease-in-out cursor-pointer'>
+        <div className='w-46 flex flex-col shadow-md justify-center items-center p-4 ml-10 md:ml-0 rounded-lg bg-white hover:scale-105 transition-transform ease-in-out cursor-pointer dark:bg-gradient-to-b dark:from-gray-300 dark:via-gray-50 dark:to-gray-400'>
           <SlBadge className='text-3xl md:text-4xl text-black'/>
           <span className='text-lg md:text-xl font-semibold dark:text-black'>Experience</span>
           <span className='text-gray-500'>
@@ -54,7 +54,7 @@ function AboutData() {
             </motion.span>
           </span>
         </div>
-        <div className='min-w-46 flex flex-col shadow-md justify-center items-center p-4 rounded-lg bg-white hover:scale-105 transition-transform ease-in-out cursor-pointer'>
+        <div className='min-w-46 flex flex-col shadow-md justify-center items-center p-4 rounded-lg bg-white hover:scale-105 transition-transform ease-in-out cursor-pointer dark:bg-gradient-to-b dark:from-gray-300 dark:via-gray-50 dark:to-gray-400'>
           <RiFundsBoxLine className='text-3xl md:text-4xl text-black'/>
           <span className='text-lg md:text-xl font-semibold dark:text-black'>Completed</span>
           <span className='text-gray-500'>

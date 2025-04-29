@@ -50,9 +50,17 @@ function Footer() {
         animate={inView ? { opacity: 1 } : {}}
         transition={{ duration: 0.8, delay: 0.2 }}
       >
-        <h2 className="text-3xl font-bold text-gray-600 dark:text-red-600">
+        {/* <h2 className="text-3xl font-bold text-red-600">
           M. Emamudin
-        </h2>
+        </h2> */}
+        <motion.h2
+          className="text-3xl font-bold animate-gradient-text"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+        >
+          M. Emamudin
+        </motion.h2>
       </motion.div>
 
       {/* Navigation Links */}

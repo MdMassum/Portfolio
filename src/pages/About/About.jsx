@@ -1,7 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import profile from "../../assets/profile.jpg";
+import profile from "../../assets/profile2.gif";
+// import profile from "../../assets/profile.jpg";
 import AboutData from "./AboutData.jsx";
 
 function About() {
@@ -33,7 +34,7 @@ function About() {
           initial={{ width: 0 }}
           animate={inView ? { width: "60%" } : { width: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="block h-1 bg-red-500 mt-2 mx-auto md:mx-0"
+          className="block h-1 bg-red-500 mt-2 md:mx-0"
         />
       </motion.div>
 
@@ -48,7 +49,7 @@ function About() {
       </motion.span>
 
       {/* Content */}
-      <div className="flex flex-col md:flex-row justify-between items-center gap-10 md:gap-20 w-full">
+      <div className="flex flex-col md:flex-row justify-between items-center gap-10 md:gap-16 w-full">
         {/* Profile Image */}
         <motion.img
           initial={{ opacity: 0, scale: 0.8 }}
@@ -56,7 +57,7 @@ function About() {
           transition={{ duration: 1, delay: 0.3 }}
           src={profile}
           alt="Profile"
-          className="w-40 md:w-52 h-40 md:h-52 rounded-full object-cover border-4 border-gray-300 shadow-xl"
+          className="w-48 md:w-64 h-48 md:h-64 rounded-full object-cover shadow-md"
         />
 
         {/* AboutData Component */}

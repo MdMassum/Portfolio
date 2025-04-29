@@ -56,7 +56,7 @@ function Contact() {
 
         <motion.div
           initial={{ width: 0 }}
-          animate={inView ? { width: "7rem" } : {}}
+          animate={inView ? { width: "60%" } : {}}
           transition={{ duration: 0.8, delay: 0.2 }}
           className="h-1 bg-red-500 rounded"
         />
@@ -93,12 +93,12 @@ function Contact() {
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5, delay: 0.6 }}
-            className="flex flex-col justify-center items-center shadow-md rounded-lg p-6 bg-white transform transition-transform duration-300 hover:scale-105"
+            className="flex flex-col justify-center items-center shadow-md rounded-lg p-6 bg-white transform transition-transform duration-300 hover:scale-105 dark:bg-gradient-to-b dark:from-gray-300 dark:via-rose-200 dark:to-gray-300"
           >
             <MdAttachEmail className="text-4xl text-red-500" />
             <span className="font-semibold text-lg dark:text-black">Email</span>
-            <span className="text-gray-500">mdemamudin726@gmail.com</span>
-            <button className="flex justify-center items-center gap-1 mt-3 text-blue-500 hover:text-blue-700">
+            <span className="text-gray-500 dark:text-gray-600">mdemamudin726@gmail.com</span>
+            <button className="flex justify-center items-center gap-1 mt-3 text-red-500 hover:text-red-700">
               <a href="mailto:mdemamudin726@gmail.com?subject=Hello%20from%20your%20portfolio">
                 Write me
               </a>
@@ -111,18 +111,18 @@ function Contact() {
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5, delay: 0.8 }}
-            className="flex flex-col justify-center items-center shadow-md rounded-lg p-6 bg-white transform transition-transform duration-300 hover:scale-105"
+            className="flex flex-col justify-center items-center shadow-md rounded-lg p-6 bg-white transform transition-transform duration-300 hover:scale-105 dark:bg-gradient-to-b dark:from-gray-300 dark:via-green-200 dark:to-gray-300"
           >
             <FaWhatsapp className="text-4xl text-green-500" />
             <span className="font-semibold text-lg dark:text-black">
               Whatsapp
             </span>
-            <span className="text-gray-500">+91 9973427703</span>
+            <span className="text-gray-500 dark:text-gray-600">+91 9973427703</span>
             <a
               href="https://wa.me/919973427703?text=Hello%20from%20your%20portfolio"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex justify-center items-center gap-1 mt-3 text-green-500 hover:text-green-700"
+              className="flex justify-center items-center gap-1 mt-3 text-green-600 hover:text-green-700"
             >
               Message me <FaArrowRight />
             </a>
@@ -156,7 +156,7 @@ function Contact() {
             <legend className="text-sm mx-4 px-1">Name</legend>
             <input
               type="text"
-              className="w-full px-4 py-2 outline-none rounded-md dark:text-black"
+              className="w-full px-4 py-2 outline-none rounded-md dark:text-black dark:bg-gradient-to-b dark:from-gray-300 dark:via-gray-50 dark:to-gray-400"
               placeholder="Insert Your Name"
               id="name"
               value={cred.name}
@@ -175,7 +175,7 @@ function Contact() {
             <legend className="text-sm mx-4 px-1">Email</legend>
             <input
               type="email"
-              className="w-full px-4 py-2 outline-none rounded-md dark:text-black"
+              className="w-full px-4 py-2 outline-none rounded-md dark:text-black dark:bg-gradient-to-b dark:from-gray-300 dark:via-gray-50 dark:to-gray-400"
               placeholder="Insert Your Email"
               id="email"
               value={cred.email}
@@ -192,7 +192,7 @@ function Contact() {
           >
             <legend className="text-sm mx-4 px-1">Message</legend>
             <textarea
-              className="w-full px-4 py-2 outline-none h-32 rounded-md dark:text-black"
+              className="w-full px-4 py-2 outline-none h-32 rounded-md dark:text-black dark:bg-gradient-to-b dark:from-gray-300 dark:via-gray-50 dark:to-gray-400"
               placeholder="Insert Your Message"
               id="desc"
               value={cred.desc}
@@ -208,7 +208,7 @@ function Contact() {
             transition={{ duration: 0.5, delay: 1.5 }}
             className="flex justify-center md:justify-start items-center gap-2 flex-col md:flex-row"
           >
-            <button className="flex items-center gap-1 bg-black text-white py-2 px-4 rounded-xl hover:bg-gray-800 hover:text-red-500 dark:bg-white dark:text-black dark:hover:bg-red-600 dark:hover:text-white">
+            <button className="flex items-center gap-1 bg-black text-white py-2 px-4 rounded-xl hover:bg-gray-800 hover:text-red-500 dark:text-black dark:hover:bg-red-600 dark:hover:text-white dark:bg-white">
               <span>Send Message</span>
               <CiLocationArrow1 className="text-xl" />
             </button>
