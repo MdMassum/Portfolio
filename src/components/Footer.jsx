@@ -42,7 +42,7 @@ function Footer() {
       initial={{ opacity: 0, y: 50 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 1 }}
-      className="flex flex-col justify-center items-center px-7 py-6 md:px-20 md:py-8 space-y-6 md:space-y-8 shadow-[0_1px_6px_rgba(0,0,0,0.2)] dark:bg-gradient-to-b dark:from-black dark:via-gray-900 dark:to-black dark:border-t border-gray-600"
+      className="flex flex-col justify-center items-center px-7 py-6 md:px-20 md:py-8 space-y-6 md:space-y-8 shadow-[0_1px_6px_rgba(0,0,0,0.2)] dark:bg-gradient-to-b dark:from-black dark:via-gray-900 dark:to-black dark:border-t border-gray-600 font-serif"
     >
       {/* Footer Brand */}
       <motion.div

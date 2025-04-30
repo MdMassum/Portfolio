@@ -1,13 +1,30 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Tagesschrift&display=swap');
+
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   scroll-behavior: smooth;
 }
 body {
   margin: 0;
+  /* @apply font-serif; */
+ 
 }
+h1,h2,h3,button{
+  @apply font-serif;
+}
+/* p{
+  @apply font-sans;
+} */
+
 html.dark {
   background-color: #000000;
 }

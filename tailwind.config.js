@@ -6,7 +6,13 @@ export default {
   ],
   darkMode: 'class', // or 'media'
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        serif: ['"Roboto Serif"', 'serif'],
+        tag: ['Tagesschrift', 'sans-serif'],
+        sans: ['Inter', 'sans-serif'],
+      },
+    },
   },
   plugins: [],
 }

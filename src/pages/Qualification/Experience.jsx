@@ -4,9 +4,9 @@ function Experience() {
   return (
     <div className="grid grid-cols-[1fr_max-content_1fr]">
       {/* First item - Left Side */}
-      <div className="flex justify-end border-r-2 border-gray-300 pr-4">
+      <div className="flex justify-end border-r-2 border-gray-300 pr-4 pb-8">
         {/* Data */}
-        <div className="text-right">
+        <div className="text-right -mt-1">
           <h4 className="font-semibold">Skillancer Private Limited</h4>
           <p className="text-gray-600 dark:text-gray-300">FullStack Intern</p>
           <p className="text-gray-400 text-sm">Mar 2025 - Present</p>
@@ -30,7 +30,7 @@ function Experience() {
       </div>
 
       {/* Second item - Right Side */}
-      <div className="flex justify-start border-l-2 border-gray-300 pl-4 -mx-0.5">
+      <div className="flex justify-start border-l-2 border-gray-300 pl-4 -mx-0.5 pb-10">
         {/* Data */}
         <div>
           <h4 className="font-semibold">Ricoz Private Limited</h4>

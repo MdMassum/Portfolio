@@ -51,7 +51,7 @@ function MainProj() {
             image: Celestium,
             git: "https://github.com/MdMassum/Celestium",
             live: "https://masumcelestium.vercel.app/",
-            name: "Celstium",
+            name: "Celestium",
             description: "Its an ui of astrologer app that i made from scratch based on figma design"
         },
         {

@@ -28,7 +28,7 @@ function Qualification() {
         transition={{ duration: 0.8, delay: 0.2 }}
         className="relative inline-block text-center md:text-left"
       >
-        <h2 className="text-3xl md:text-5xl font-bold dark:text-white">
+        <h2 className="text-3xl md:text-5xl font-bold bg-gradient-to-b from-gray-600 via-gray-300 to-gray-600 dark:from-gray-100 dark:via-gray-400 dark:to-gray-100 bg-clip-text text-transparent">
           Qualification
         </h2>
 
@@ -44,28 +44,46 @@ function Qualification() {
         My Personal Journey
       </span>
 
-      <div className="flex justify-center gap-6 mb-6 mt-10 text-xl">
+      <div className="flex justify-center gap-6 mb-10 mt-10 text-xl">
         <button
-          className={`flex items-center gap-2 ${
+          className={`relative flex flex-col items-start gap-1 ${
             activeTab === "Education"
-              ? "text-black dark:text-white font-semibold"
+              ? "text-red-600 font-semibold"
               : "text-gray-500 dark:text-gray-300"
           }`}
           onClick={() => setActiveTab("Education")}
         >
+          <div className="flex gap-1 items-center">
           <FaGraduationCap />
           Education
+          </div>
+          
+          {activeTab === "Education" && (
+            <motion.span
+              layoutId="underline"
+              className="h-1 w-14 bg-red-500 rounded origin-left"
+            />
+          )}
         </button>
         <button
-          className={`flex items-center gap-2 ${
+          className={`relative flex flex-col items-start gap-1 ${
             activeTab === "Experience"
-              ? "text-black dark:text-white font-semibold"
+              ? "text-red-600 font-semibold"
               : "text-gray-500 dark:text-gray-300"
           }`}
           onClick={() => setActiveTab("Experience")}
         >
+          
+          <div className="flex gap-1 items-center">
           <FaBriefcase />
           Experience
+          </div>
+          {activeTab === "Experience" && (
+            <motion.span
+              layoutId="underline"
+              className="h-1 w-14 bg-red-500 rounded origin-left"
+            />
+          )}
         </button>
       </div>
       <motion.div

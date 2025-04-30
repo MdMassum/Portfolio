@@ -49,7 +49,7 @@ function Contact() {
           initial={{ opacity: 0, y: -20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
-          className="text-3xl md:text-5xl font-bold text-center md:text-left dark:text-white"
+          className="text-3xl md:text-5xl font-bold text-center md:text-left bg-gradient-to-b from-gray-600 via-gray-300 to-gray-600 dark:from-gray-100 dark:via-gray-400 dark:to-gray-100 bg-clip-text text-transparent"
         >
           Contact Me
         </motion.h2>

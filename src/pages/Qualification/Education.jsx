@@ -4,9 +4,9 @@ function Education() {
   return (
     <div className="grid grid-cols-[1fr_max-content_1fr]">
       {/* First item - Left Side */}
-      <div className="flex justify-end border-r-2 border-gray-300 pr-4">
+      <div className="flex justify-end border-r-2 border-gray-300 pr-4 pb-8 ">
         {/* Data */}
-        <div className="text-right">
+        <div className="text-right -mt-2">
           <h4 className="font-semibold">Btech Cse</h4>
           <p className="text-gray-600 dark:text-gray-200">Mittal Institute Of Technology</p>
           <p className="text-gray-400 text-sm">2021 - Present</p>
@@ -30,7 +30,7 @@ function Education() {
       </div>
 
       {/* Second item - Right Side */}
-      <div className="flex justify-start border-l-2 border-gray-300 pl-4 -mx-0.5">
+      <div className="flex justify-start border-l-2 border-gray-300 pl-4 pb-8 -mx-0.5">
         {/* Data */}
         <div>
           <h4 className="font-semibold">Class XII</h4>

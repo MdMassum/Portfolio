@@ -61,7 +61,7 @@ function Data() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8, delay: 0.6 }}
-        className="text-xl md:text-2xl font-semibold text-gray-600 dark:text-white  min-h-[40px] md:min-h-[45px]"
+        className="text-xl md:text-2xl font-bold min-h-[40px] md:min-h-[45px] bg-gradient-to-b from-gray-600 via-gray-300 to-gray-600 dark:from-gray-100 dark:via-gray-400 dark:to-gray-100 bg-clip-text text-transparent"
       >
         <span className="hidden md:inline dark:text-white">________</span>
         {displayedText}
@@ -78,7 +78,6 @@ function Data() {
         becoming a skilled software developer!"
       </motion.p>
 
-      {/* Button */}
       <motion.div
         initial={{ y: 20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}

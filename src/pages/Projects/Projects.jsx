@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import MainProj from "./MainProj";
 import PractiseProj from "./PractiseProj";
+import { FaRocket, FaTools } from "react-icons/fa";
 
 function Projects() {
   const [activeTab, setActiveTab] = useState("Main");
@@ -26,7 +27,7 @@ function Projects() {
         transition={{ duration: 0.8, delay: 0.2 }}
         className="relative inline-block text-center md:text-left"
       >
-        <h1 className="text-3xl md:text-5xl font-bold dark:text-white">
+        <h1 className="text-3xl md:text-5xl font-bold bg-gradient-to-b from-gray-600 via-gray-300 to-gray-600 dark:from-gray-100 dark:via-gray-400 dark:to-gray-100 bg-clip-text text-transparent">
           My Projects
         </h1>
 
@@ -51,12 +52,15 @@ function Projects() {
         <button
           className={`relative flex flex-col items-start gap-1 ${
             activeTab === "Main"
-              ? "text-black dark:text-white font-semibold"
+              ? "text-red-600 font-semibold"
               : "text-gray-500 dark:text-gray-300"
           }`}
           onClick={() => setActiveTab("Main")}
         >
+          <div className="flex gap-1 items-center">
+          <FaRocket />
           Main Projects
+          </div>
           {activeTab === "Main" && (
             <motion.span
               layoutId="underline"
@@ -68,12 +72,16 @@ function Projects() {
         <button
           className={`relative flex flex-col items-start gap-1 ${
             activeTab === "Practise"
-              ? "text-black dark:text-white font-semibold"
+              ? "text-red-600 font-semibold"
               : "text-gray-500 dark:text-gray-300"
           }`}
           onClick={() => setActiveTab("Practise")}
         >
+          <div className="flex gap-1 items-center">
+          <FaTools />
           Practise Projects
+          </div>
+          
           {activeTab === "Practise" && (
             <motion.span
               layoutId="underline"

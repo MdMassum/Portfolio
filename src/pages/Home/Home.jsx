@@ -17,7 +17,7 @@ function Home() {
         className='flex flex-col overflow-hidden'
       >
 
-        <div className='flex flex-col md:flex-row items-center justify-around md:justify-between p-7 md:px-40 mt-8 dark:bg-gradient-to-b dark:from-black dark:via-gray-800 dark:to-black'>
+        <div className='flex flex-col md:flex-row items-center justify-around md:justify-between p-7 md:px-40 mt-16 md:mt-8 dark:bg-gradient-to-b dark:from-black dark:via-gray-800 dark:to-black'>
 
           {/* Social Section */}
           <motion.div

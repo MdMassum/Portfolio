@@ -10,21 +10,21 @@ function Card({ project }) {
           alt={project.name} 
           className='h-[190px] md:h-[230px] w-full object-cover hover:scale-105 transition-transform duration-300 border-b  border-black'
         />
-        <div className="p-4 flex flex-col">
-          <p className='font-semibold text-slate-800 text-lg truncate mb-3'>{project.name}</p>
+        <div className="p-4 flex flex-col bg-gradient-to-b from-gray-300 via-gray-50 to-gray-400">
+          <p className='font-semibold text-slate-800 text-lg truncate mb-3 font-serif'>{project.name}</p>
           <p className='text-gray-600 text-sm line-clamp-2 mb-4'>{project.description}</p>
 
           <div className="flex justify-between">
             <a 
               href={project.live}
               target="_blank"  
-              className="flex justify-center items-center gap-1 text-black font-bold text-sm hover:underline">
+              className="flex justify-center items-center gap-1 text-black font-bold text-sm hover:underline hover:text-red-600 font-serif">
               Live Demo<FaArrowRight />
             </a>
             <a 
               href={project.git}
               target="_blank" 
-              className="flex justify-center items-center gap-1 text-black font-bold text-sm hover:underline">
+              className="flex justify-center items-center gap-1 text-black font-bold text-sm hover:underline hover:text-red-600 font-serif">
               GitHub<FaArrowRight />
             </a>
           </div>

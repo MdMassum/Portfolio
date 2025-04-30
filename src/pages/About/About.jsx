@@ -28,7 +28,7 @@ function About() {
         transition={{ duration: 0.8, delay: 0.2 }}
         className="relative inline-block text-center md:text-left"
       >
-        <h2 className="text-3xl md:text-5xl font-bold">About Me</h2>
+        <h2 className="text-3xl md:text-5xl font-bold bg-gradient-to-b from-gray-600 via-gray-300 to-gray-600 dark:from-gray-100 dark:via-gray-400 dark:to-gray-100 bg-clip-text text-transparent">About Me</h2>
 
         <motion.span
           initial={{ width: 0 }}
