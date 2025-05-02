@@ -7,6 +7,7 @@ import { FaGraduationCap } from "react-icons/fa6";
 import { LuFileSignature } from "react-icons/lu";
 import { FaCloudMoon } from "react-icons/fa";
 import { MdSunny } from "react-icons/md";
+import logo from '../assets/logo2.png'
 
 function Header({ darkTheme, lightTheme, themeMode }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -92,22 +93,13 @@ function Header({ darkTheme, lightTheme, themeMode }) {
       transition={{ duration: 0.5 }}
       className="flex justify-between items-center px-14 py-3 md:px-40 md:py-4 bg-white shadow-md sticky top-0 z-40 dark:bg-transparent dark:backdrop-blur-md dark:text-white dark:border-b border-gray-500 font-serif"
     >
-      <div className="flex flex-col items-start gap-1 md:gap-2 overflow-hidden">
-        
-        <motion.h2
-          className='text-2xl md:text-3xl font-bold animate-gradient-text'
+      <div className="flex flex-col items-start gap-1 md:gap-2">
+      <motion.img
+          className='h-10 -ml-6 md:ml-0 md:h-11'
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
-        >
-          M. Emamudin
-        </motion.h2>
-
-        <motion.div
-          initial={{ width: 0 }}
-          animate={{ width: "6rem" }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="h-1 bg-red-500 rounded"
+          src={logo}
         />
       </div>
 
@@ -212,12 +204,12 @@ function Header({ darkTheme, lightTheme, themeMode }) {
         {themeMode === "light" ? (
           <MdSunny
             onClick={handleToggle}
-            className="fixed top-4 right-12 w-8 h-8 cursor-pointer"
+            className="fixed top-4 right-9 w-8 h-8 cursor-pointer"
           />
         ) : (
           <FaCloudMoon
             onClick={handleToggle}
-            className="fixed top-4 right-12 w-8 h-8 cursor-pointer"
+            className="fixed top-4 right-9 w-8 h-8 cursor-pointer"
           />
         )}
       </div>

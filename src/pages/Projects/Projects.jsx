@@ -47,7 +47,7 @@ function Projects() {
         initial={{ opacity: 0, x: -50 }}
         animate={inView ? { opacity: 1, x: 0 } : {}}
         transition={{ duration: 0.8, delay: 0.2 }}
-        className="flex justify-center gap-6 mb-1 mt-10 text-xl"
+        className="flex justify-center gap-4 md:gap-6 mb-1 mt-10 texl-lg md:text-xl"
       >
         <button
           className={`relative flex flex-col items-start gap-1 ${

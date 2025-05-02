@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { FaInstagram, FaLinkedin, FaGithub } from "react-icons/fa";
 import { SiLeetcode } from "react-icons/si";
+import logoImg from '../assets/logo2.png'
 
 function Footer() {
   const nav = [
@@ -50,17 +51,22 @@ function Footer() {
         animate={inView ? { opacity: 1 } : {}}
         transition={{ duration: 0.8, delay: 0.2 }}
       >
-        {/* <h2 className="text-3xl font-bold text-red-600">
-          M. Emamudin
-        </h2> */}
-        <motion.h2
+        
+        {/* <motion.h2
           className="text-3xl font-bold animate-gradient-text"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
         >
           M. Emamudin
-        </motion.h2>
+        </motion.h2> */}
+        <motion.img
+          className='h-10 md:h-11'
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+          src={logoImg}        
+        />
       </motion.div>
 
       {/* Navigation Links */}
