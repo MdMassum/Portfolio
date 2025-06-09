@@ -13,7 +13,7 @@ function ScrollUp() {
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.9 }}
     >
-      <FaArrowAltCircleUp className='w-12 h-12 text-gray-600 hover:text-black transition-transform transform hover:scale-110 dark:text-gray-300 hover:dark:text-white' />
+      <FaArrowAltCircleUp className='animate-bounce w-12 h-12 text-gray-600 hover:text-black transition-transform transform hover:scale-110 dark:text-gray-300 hover:dark:text-white' />
     </motion.a>
   );
 }

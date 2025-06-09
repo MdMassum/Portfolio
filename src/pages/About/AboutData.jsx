@@ -5,6 +5,7 @@ import { SlBadge } from "react-icons/sl";
 import { RiFundsBoxLine } from "react-icons/ri";
 import { IoDocumentTextOutline } from "react-icons/io5";
 import resume from '../../assets/Resume_Emam.pdf';
+import AnimatedBorderButton from '../../components/AnimatedBorderButton';
 
 function AboutData() {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.3 });
@@ -88,10 +89,11 @@ function AboutData() {
         className='flex justify-center md:justify-start'
       >
         <a href={resume} download>
-          <button className='flex items-center gap-2 bg-black text-white py-2 px-4 rounded-xl hover:bg-gray-800 hover:text-red-600 dark:bg-white dark:text-black dark:hover:text-white dark:hover:bg-red-600'>
+          
+          <AnimatedBorderButton>
             <span>Download CV</span>
             <IoDocumentTextOutline className='text-xl'/>
-          </button>
+          </AnimatedBorderButton>
         </a>
       </motion.div>
     </motion.div>

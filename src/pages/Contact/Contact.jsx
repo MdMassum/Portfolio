@@ -5,6 +5,7 @@ import { CiLocationArrow1 } from "react-icons/ci";
 import emailjs from "emailjs-com";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import AnimatedBorderButton from "../../components/AnimatedBorderButton";
 
 function Contact() {
   const [cred, setCred] = useState({ name: "", email: "", desc: "" });
@@ -98,7 +99,7 @@ function Contact() {
             <MdAttachEmail className="text-4xl text-red-500" />
             <span className="font-semibold text-lg dark:text-black">Email</span>
             <span className="text-gray-500 dark:text-gray-600">mdemamudin726@gmail.com</span>
-            <button className="flex justify-center items-center gap-1 mt-3 text-red-500 hover:text-red-700">
+            <button className="flex justify-center items-center gap-1 mt-3 text-red-500 hover:text-red-700 hover:underline">
               <a href="mailto:mdemamudin726@gmail.com?subject=Hello%20from%20your%20portfolio">
                 Write me
               </a>
@@ -122,7 +123,7 @@ function Contact() {
               href="https://wa.me/919973427703?text=Hello%20from%20your%20portfolio"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex justify-center items-center gap-1 mt-3 text-green-600 hover:text-green-700"
+              className="flex justify-center items-center gap-1 mt-3 text-green-600 hover:text-green-700 hover:underline"
             >
               Message me <FaArrowRight />
             </a>
@@ -208,10 +209,10 @@ function Contact() {
             transition={{ duration: 0.5, delay: 1.5 }}
             className="flex justify-center md:justify-start items-center gap-2 flex-col md:flex-row"
           >
-            <button className="flex items-center gap-1 bg-black text-white py-2 px-4 rounded-xl hover:bg-gray-800 hover:text-red-500 dark:text-black dark:hover:bg-red-600 dark:hover:text-white dark:bg-white">
+            <AnimatedBorderButton>
               <span>Send Message</span>
               <CiLocationArrow1 className="text-xl" />
-            </button>
+            </AnimatedBorderButton>
             {success && (
               <span className="text-sm text-green-600 font-semibold dark:text-green-300">
                 Message Sent SuccessFully !!

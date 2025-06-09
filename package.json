@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "clsx": "^2.1.1",
     "emailjs": "^4.0.3",
     "emailjs-com": "^3.2.0",
     "framer-motion": "^12.5.0",
