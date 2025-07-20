@@ -8,6 +8,8 @@ import codeTogether from '../../assets/codeTogether.png';
 import Axis_Exports from '../../assets/axis_exports.png';
 import ecom from '../../assets/ecom.png';
 import HostIt from '../../assets/HostIt.png';
+import drinkTru from '../../assets/drinkTru.png';
+import collageWeb from '../../assets/collageWeb.png';
 import Card from './Card.jsx';
 
 function MainProj() {
@@ -67,6 +69,20 @@ function MainProj() {
             live: "https://vocal-for-local.vercel.app/",
             name: "Vocal For Local",
             description: "Ecommerce app made for locals with seller and admin dashboard"
+        },
+        {
+            image: collageWeb,
+            git: "https://github.com/MdMassum/collage-web",
+            live: "https://collage-web-lovat.vercel.app/",
+            name: "Collage Website",
+            description: "Collage Website with student, Teacher and Principal login and their dashboard"
+        },
+        {
+            image: drinkTru,
+            git: "https://github.com/MdMassum/drinktrue",
+            live: "https://drinktrue.vercel.app/",
+            name: "DrinkTru",
+            description: "Tru Mineral Water | Pure And Elegance In Every Drop"
         },
     ];
 

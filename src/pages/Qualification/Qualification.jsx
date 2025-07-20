@@ -6,7 +6,7 @@ import Education from "./Education";
 import Experience from "./Experience";
 
 function Qualification() {
-  const [activeTab, setActiveTab] = useState("Education");
+  const [activeTab, setActiveTab] = useState("Experience");
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.3 });
 
   return (
@@ -45,6 +45,26 @@ function Qualification() {
       </span>
 
       <div className="flex justify-center gap-6 mb-10 mt-10 text-xl">
+      <button
+          className={`relative flex flex-col items-start gap-1 ${
+            activeTab === "Experience"
+              ? "text-red-600 font-semibold"
+              : "text-gray-500 dark:text-gray-300"
+          }`}
+          onClick={() => setActiveTab("Experience")}
+        >
+          
+          <div className="flex gap-1 items-center">
+          <FaBriefcase />
+          Experience
+          </div>
+          {activeTab === "Experience" && (
+            <motion.span
+              layoutId="underline"
+              className="h-1 w-14 bg-red-500 rounded origin-left"
+            />
+          )}
+        </button>
         <button
           className={`relative flex flex-col items-start gap-1 ${
             activeTab === "Education"
@@ -59,26 +79,6 @@ function Qualification() {
           </div>
           
           {activeTab === "Education" && (
-            <motion.span
-              layoutId="underline"
-              className="h-1 w-14 bg-red-500 rounded origin-left"
-            />
-          )}
-        </button>
-        <button
-          className={`relative flex flex-col items-start gap-1 ${
-            activeTab === "Experience"
-              ? "text-red-600 font-semibold"
-              : "text-gray-500 dark:text-gray-300"
-          }`}
-          onClick={() => setActiveTab("Experience")}
-        >
-          
-          <div className="flex gap-1 items-center">
-          <FaBriefcase />
-          Experience
-          </div>
-          {activeTab === "Experience" && (
             <motion.span
               layoutId="underline"
               className="h-1 w-14 bg-red-500 rounded origin-left"
