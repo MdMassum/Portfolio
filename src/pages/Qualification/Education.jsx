@@ -8,8 +8,8 @@ function Education() {
         {/* Data */}
         <div className="text-right -mt-2">
           <h4 className="font-semibold">Btech Cse</h4>
-          <p className="text-gray-600 dark:text-gray-200">Mittal Institute Of Technology</p>
-          <p className="text-gray-400 text-sm">2021 - Present</p>
+          <p className="text-gray-600 dark:text-gray-200">Mittal Institute Of Technology, Bhopal</p>
+          <p className="text-gray-400 text-sm">2021 - 2025</p>
         </div>
       </div>
       
@@ -34,7 +34,7 @@ function Education() {
         {/* Data */}
         <div>
           <h4 className="font-semibold">Class XII</h4>
-          <p className="text-gray-600 dark:text-gray-300">Kendriya Vidyalaya</p>
+          <p className="text-gray-600 dark:text-gray-300">Kendriya Vidyalaya No 1, Itanagar</p>
           <p className="text-gray-400 text-sm">2020 - 2021</p>
         </div>
       </div>

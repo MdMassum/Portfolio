@@ -18,7 +18,7 @@ function AboutData() {
     if (inView) {
       // Start both intervals simultaneously when the component is in view
       const experienceInterval = setInterval(() => {
-        setExperience((prev) => (prev < 10 ? prev + 1 : prev));
+        setExperience((prev) => (prev < 1 ? prev + 1 : prev));
       }, 150); // Adjust the speed for experience
 
       const projectsInterval = setInterval(() => {
@@ -51,7 +51,7 @@ function AboutData() {
               animate={{ opacity: 1 }}
               transition={{ duration: 1 }}
             >
-              {experience} Month
+              {experience} year
             </motion.span>
           </span>
         </div>

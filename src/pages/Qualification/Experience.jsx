@@ -7,9 +7,9 @@ function Experience() {
       <div className="flex justify-end border-r-2 border-gray-300 pr-4 pb-8">
         {/* Data */}
         <div className="text-right -mt-1">
-          <h4 className="font-semibold">Skillancer Private Limited</h4>
-          <p className="text-gray-600 dark:text-gray-300">FullStack Intern</p>
-          <p className="text-gray-400 text-sm">Mar 2025 - Present</p>
+          <h4 className="font-semibold">Highway Delite</h4>
+          <p className="text-gray-600 dark:text-gray-300">Software Developer Intern</p>
+          <p className="text-gray-400 text-sm">Aug 2025 - Present</p>
         </div>
       </div>
       
@@ -33,9 +33,9 @@ function Experience() {
       <div className="flex justify-start border-l-2 border-gray-300 pl-4 -mx-0.5 pb-10">
         {/* Data */}
         <div>
-          <h4 className="font-semibold">Ricoz Private Limited</h4>
+          <h4 className="font-semibold">Skillancer Private Limited</h4>
           <p className="text-gray-600 dark:text-gray-300">FullStack Intern</p>
-          <p className="text-gray-400 text-sm">Sep 2024 - Feb - 2025</p>
+          <p className="text-gray-400 text-sm">Mar 2025 - July 2025</p>
         </div>
       </div>
 
@@ -43,9 +43,9 @@ function Experience() {
       <div className="flex justify-end border-r-2 border-gray-300 pr-4">
         {/* Data */}
         <div className="text-right">
-          <h4 className="font-semibold">Nil</h4>
-          <p className="text-gray-600 dark:text-gray-300">Intern</p>
-          <p className="text-gray-400 text-sm">2021</p>
+          <h4 className="font-semibold">Ricoz Private Limited</h4>
+          <p className="text-gray-600 dark:text-gray-300">FullStack Intern</p>
+          <p className="text-gray-400 text-sm">Sep 2024 - Feb - 2025</p>
         </div>
       </div>
       

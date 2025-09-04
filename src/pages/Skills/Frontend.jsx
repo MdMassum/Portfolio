@@ -5,7 +5,8 @@ import {
   FaHtml5, FaCss3Alt, FaJs, FaReact,
 } from 'react-icons/fa';
 import {
-  SiTypescript, SiNextdotjs, SiTailwindcss, SiSocketdotio
+  SiTypescript, SiNextdotjs, SiTailwindcss, SiSocketdotio,
+  SiShadcnui
 } from 'react-icons/si';
 
 const skills = [
@@ -16,6 +17,7 @@ const skills = [
   { name: 'React.js', icon: <FaReact className="text-cyan-400 text-2xl" /> },
   { name: 'Next.js', icon: <SiNextdotjs className="text-black text-2xl" /> },
   { name: 'Tailwind CSS', icon: <SiTailwindcss className="text-sky-400 text-2xl" /> },
+  { name: 'Shadcn', icon: <SiShadcnui className="text-gray-700 text-2xl" /> },
   { name: 'Socket.io', icon: <SiSocketdotio className="text-gray-700 text-2xl" /> },
 ];
 
