@@ -6,6 +6,7 @@ import { RiFundsBoxLine } from "react-icons/ri";
 import { IoDocumentTextOutline } from "react-icons/io5";
 import resume from '../../assets/Resume_Emam.pdf';
 import AnimatedBorderButton from '../../components/AnimatedBorderButton';
+import ReactGA from "react-ga4";
 
 function AboutData() {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.3 });
@@ -32,6 +33,14 @@ function AboutData() {
       };
     }
   }, [inView]);
+
+  const handleResumeClick = (platform) => {
+    ReactGA.event({
+      category: "Resume Button",
+      action: "Click",
+      label: platform,
+    });
+  };
 
   return (
     <motion.div ref={ref} className='flex flex-col gap-6'>
@@ -88,8 +97,15 @@ function AboutData() {
         transition={{ duration: 0.8, delay: 0.6 }}
         className='flex justify-center md:justify-start'
       >
-        <a href={resume} download>
-          
+        <a href={resume} download
+          onClick={(e) => {
+            e.preventDefault(); // prevent immediate download
+            handleResumeClick("Download CV Button");
+            setTimeout(() => {
+              window.location.href = resume; // start download after GA event is sent
+            }, 200);
+          }}
+        >
           <AnimatedBorderButton>
             <span>Download CV</span>
             <IoDocumentTextOutline className='text-xl'/>

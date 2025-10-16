@@ -4,8 +4,19 @@ import { useInView } from "react-intersection-observer";
 import { FaInstagram, FaLinkedin, FaGithub } from "react-icons/fa";
 import { SiLeetcode } from "react-icons/si";
 import logoImg from '../assets/logo2.png'
+import ReactGA from "react-ga4";
 
 function Footer() {
+
+  const handleFooterClick = (category, label) => {
+    ReactGA.event({
+      category: category,
+      action: "Click",
+      label: label,
+    });
+  };
+
+  
   const nav = [
     { label: "About", href: "#about" },
     { label: "Skills", href: "#skills" },
@@ -99,6 +110,9 @@ function Footer() {
           {logo.map((item, idx) => (
             <li key={idx}>
               <a
+                onClick={() => handleFooterClick("Footer Social", item.href.includes("instagram") ? "Instagram" :
+                item.href.includes("linkedin") ? "LinkedIn" :
+                item.href.includes("github") ? "GitHub" : "LeetCode")}
                 href={item.href}
                 target="_blank"
                 rel="noopener noreferrer"

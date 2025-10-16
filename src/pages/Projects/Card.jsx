@@ -1,7 +1,18 @@
 import React from 'react'
 import {FaArrowRight } from "react-icons/fa6";
+import ReactGA from "react-ga4";
 
 function Card({ project }) {
+
+  const handleClick = (buttonType) => {
+    ReactGA.event({
+      category: "Project Interaction",
+      action: `${buttonType} Clicked`,
+      label: project.name,
+    });
+  };
+
+  
   return (
     <div className='bg-white shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden rounded-lg w-[349px] m-3'>
       <div>
@@ -16,12 +27,15 @@ function Card({ project }) {
 
           <div className="flex justify-between">
             <a 
+              onClick={() => handleClick("Live Demo")}
               href={project.live}
               target="_blank"  
               className="flex justify-center items-center gap-1 text-black font-bold text-sm hover:underline hover:text-red-600 font-serif">
               Live Demo<FaArrowRight />
             </a>
+
             <a 
+              onClick={() => handleClick("GitHub")}
               href={project.git}
               target="_blank" 
               className="flex justify-center items-center gap-1 text-black font-bold text-sm hover:underline hover:text-red-600 font-serif">

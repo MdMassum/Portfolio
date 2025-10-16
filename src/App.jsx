@@ -1,4 +1,3 @@
-// import './App.css'
 import { useEffect, useState } from "react"
 import Footer from "./components/Footer"
 import Header from "./components/Header"
@@ -9,6 +8,8 @@ import Home from "./pages/Home/Home"
 import Projects from "./pages/Projects/Projects"
 import Qualification from "./pages/Qualification/Qualification"
 import Skills from "./pages/Skills/Skills"
+import AnalyticsTracker from "./components/Analytics"
+
 
 function App() {
 
@@ -31,6 +32,7 @@ function App() {
 
   return (
     <>
+      <AnalyticsTracker/>
       <Header darkTheme={darkTheme} lightTheme={lightTheme} themeMode={themeMode} />
       <Home/>
       <About/>
